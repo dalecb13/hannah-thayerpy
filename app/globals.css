@@ -137,3 +137,12 @@ body {
   padding: 0.75rem 1rem;
   box-shadow: 0 8px 30px rgba(31, 35, 41, 0.08);
 }
+
+.captcha-placeholder {
+  border: 2px dashed rgba(31, 35, 41, 0.25);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  color: #555;
+  background: #fffdf8;
+}

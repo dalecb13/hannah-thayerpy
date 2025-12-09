@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,12 +11,12 @@ export default function Home() {
             Therapy & wellness counseling inspired by Mediterranean calm
           </p>
         </div>
-        <a
-          href="mailto:hello@therapywellness.com"
+        <Link
+          href="/consultation"
           className="pill text-sm font-medium text-[#1f2329] hover:shadow-md transition-shadow"
         >
           Schedule a call
-        </a>
+        </Link>
       </header>
 
       <main>
@@ -36,18 +37,18 @@ export default function Home() {
                 care, delivered with warmth.
               </p>
               <div className="flex flex-wrap gap-3">
-                <a
-                  href="mailto:hello@therapywellness.com"
+                <Link
+                  href="/consultation"
                   className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-medium shadow-md shadow-[#f48c44]/30 hover:bg-[#d76c25] transition-colors"
                 >
                   Book a consultation
-          </a>
-          <a
+                </Link>
+                <Link
                   href="#services"
                   className="rounded-full border border-[#1f2329]/10 px-6 py-3 font-medium text-[#1f2329] hover:border-[#3e879e]/50 hover:text-[#3e879e] transition-colors"
                 >
                   Explore services
-                </a>
+                </Link>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 pt-2">
                 {[
@@ -220,12 +221,12 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <a
-                href="mailto:hello@therapywellness.com"
+              <Link
+                href="/consultation"
                 className="self-start rounded-full bg-[#f48c44] text-white px-6 py-3 font-medium shadow-md shadow-[#f48c44]/30 hover:bg-[#d76c25] transition-colors"
               >
                 Schedule a consultation
-          </a>
+              </Link>
         </div>
           </div>
         </section>
