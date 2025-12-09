@@ -31,7 +31,7 @@ export default function Home() {
                 Professional therapy that feels human, steady, and inviting.
               </h1>
               <p className="text-lg text-neutral-700 leading-relaxed">
-                Together we'll create a supportive space to work through anxiety, relationship
+                Together we will create a supportive space to work through anxiety, relationship
                 transitions, and the moments that feel too heavy to carry alone. Evidence-based
                 care, delivered with warmth.
               </p>
@@ -77,7 +77,7 @@ export default function Home() {
               <div className="photo-note">
                 <div>
                   <p className="text-sm font-semibold text-[#1f2329]">Warm, approachable care</p>
-                  <p className="text-xs text-neutral-600">In-person & telehealth sessions</p>
+                  <p className="text-xs text-neutral-600">Telehealth sessions (CA)</p>
                 </div>
                 <span className="handwritten-text text-[#f48c44] text-lg">Hannah</span>
               </div>
@@ -169,7 +169,7 @@ export default function Home() {
           <div className="max-w-3xl mb-10">
             <span className="handwritten-text text-[#f48c44] text-lg">Client reflections</span>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
-              \"I feel calmer, clearer, and less alone.\"
+              &ldquo;I feel calmer, clearer, and less alone.&rdquo;
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
@@ -200,10 +200,10 @@ export default function Home() {
               <div className="space-y-2">
                 <span className="handwritten-text text-[#3e879e] text-lg">Next step</span>
                 <h3 className="text-2xl md:text-3xl font-semibold">
-                  Let's plan your first session.
+                  Let&apos;s plan your first session.
                 </h3>
                 <p className="text-lg text-neutral-700">
-                  Email or call to schedule. In-person and telehealth appointments available.
+                  Email or call to schedule. Telehealth appointments available across California.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 pt-4 text-sm">
                   <div>
