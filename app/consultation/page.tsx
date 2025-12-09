@@ -2,123 +2,135 @@ import Link from "next/link";
 
 export default function Consultation() {
   return (
-    <div className="min-h-screen text-[#1f2329] w-full overflow-x-hidden">
-      <header className="section-shell pt-4 pb-3 flex items-center justify-between gap-2">
-        <div>
-          <p className="handwritten-text text-[#f48c44] text-xl">Consultation</p>
-          <p className="text-sm text-neutral-600">Telehealth sessions across California</p>
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="container py-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <p className="handwritten text-[#f48c44] text-xl">Consultation</p>
+          </div>
+          <Link href="/" className="btn btn-secondary text-sm">
+            ← Back
+          </Link>
         </div>
-        <Link
-          href="/"
-          className="pill text-sm font-medium text-[#1f2329] hover:shadow-md transition-shadow"
-        >
-          Back to home
-        </Link>
       </header>
 
       <main>
-        <section className="section-shell py-6 pb-10">
-          <div className="space-y-4">
-            <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
-              Schedule a telehealth consultation
-            </h1>
-            <p className="text-lg text-neutral-700">
-              Tell me a bit about what you are looking for, and I will follow up to confirm a
-              telehealth appointment time.
-            </p>
-          </div>
+        <section className="container section">
+          <h1 className="text-2xl sm:text-3xl font-bold mb-2">
+            Schedule a consultation
+          </h1>
+          <p className="text-neutral-600 mb-6">
+            Telehealth sessions available across California. Fill out the form below and 
+            I&apos;ll follow up within 1–2 business days.
+          </p>
 
-          <div className="card-soft p-4 md:p-6 mt-6 space-y-5">
-            <div className="grid gap-4 md:grid-cols-2 md:gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#1f2329]" htmlFor="name">
-                  Full name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
-                  placeholder="Your name"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#1f2329]" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
-                  placeholder="you@example.com"
-                />
-              </div>
+          <form className="card p-5 sm:p-6 space-y-5">
+            {/* Name */}
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="name">
+                Full name
+              </label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                required
+                className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#3e879e] focus:ring-1 focus:ring-[#3e879e]"
+                placeholder="Your name"
+              />
             </div>
 
-            <div className="grid gap-4 md:grid-cols-2 md:gap-6">
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#1f2329]" htmlFor="phone">
-                  Phone (optional)
-                </label>
-                <input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-              <div className="space-y-2">
-                <label className="text-sm font-semibold text-[#1f2329]" htmlFor="availability">
-                  Preferred times
-                </label>
-                <input
-                  id="availability"
-                  name="availability"
-                  type="text"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
-                  placeholder="Weekdays 3–6pm"
-                />
-              </div>
+            {/* Email */}
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="email">
+                Email
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                required
+                className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#3e879e] focus:ring-1 focus:ring-[#3e879e]"
+                placeholder="you@example.com"
+              />
             </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-semibold text-[#1f2329]" htmlFor="focus">
-                What would you like to focus on?
+            {/* Phone */}
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="phone">
+                Phone <span className="text-neutral-400">(optional)</span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#3e879e] focus:ring-1 focus:ring-[#3e879e]"
+                placeholder="(555) 123-4567"
+              />
+            </div>
+
+            {/* Availability */}
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="availability">
+                Preferred times
+              </label>
+              <input
+                id="availability"
+                name="availability"
+                type="text"
+                className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#3e879e] focus:ring-1 focus:ring-[#3e879e]"
+                placeholder="e.g., Weekday afternoons"
+              />
+            </div>
+
+            {/* Focus */}
+            <div>
+              <label className="block text-sm font-medium mb-2" htmlFor="focus">
+                What brings you to therapy?
               </label>
               <textarea
                 id="focus"
                 name="focus"
                 rows={4}
-                className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
-                placeholder="Share a few notes about what brings you to therapy..."
+                className="w-full border border-neutral-200 rounded-lg px-4 py-3 text-base focus:outline-none focus:border-[#3e879e] focus:ring-1 focus:ring-[#3e879e] resize-none"
+                placeholder="Share a few notes about what you'd like to work on..."
               />
             </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-semibold text-[#1f2329]">Human verification</label>
-              <div className="captcha-placeholder" aria-label="Captcha placeholder">
-                CAPTCHA placeholder
+            {/* Captcha */}
+            <div>
+              <label className="block text-sm font-medium mb-2">
+                Verification
+              </label>
+              <div className="captcha-placeholder">
+                CAPTCHA will appear here
               </div>
-              <p className="text-xs text-neutral-500">
-                A verification step will appear here to confirm you are human.
+              <p className="text-xs text-neutral-500 mt-2">
+                A verification step will confirm you&apos;re human.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
-              <button
-                type="button"
-                className="rounded-full bg-[#f48c44] text-white px-5 py-2.5 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
-              >
+            {/* Submit */}
+            <div className="pt-2">
+              <button type="submit" className="btn btn-primary btn-full">
                 Send request
               </button>
-              <p className="text-sm text-neutral-600">Telehealth only. I will reply within 1–2 business days.</p>
+              <p className="text-sm text-neutral-500 text-center mt-3">
+                I&apos;ll reply within 1–2 business days.
+              </p>
             </div>
-          </div>
+          </form>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="container py-8">
+        <div className="divider mb-6" />
+        <p className="text-center text-sm text-neutral-500">
+          Hannah Thayer, LMFT · Telehealth Therapy · California
+        </p>
+      </footer>
     </div>
   );
 }
-

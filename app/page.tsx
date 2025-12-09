@@ -3,242 +3,225 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-[#1f2329] w-full overflow-x-hidden">
-      <header className="section-shell pt-4 pb-3 flex items-center justify-between gap-2">
-        <div>
-          <p className="handwritten-text text-[#f48c44] text-xl">Hannah Thayer, LMFT</p>
-          <p className="text-sm text-neutral-600">
-            Therapy & wellness counseling with a warm, calming approach
-          </p>
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="container py-4">
+        <div className="flex items-center justify-between">
+          <div className="min-w-0 flex-1">
+            <p className="handwritten text-[#f48c44] text-xl sm:text-2xl">Hannah Thayer, LMFT</p>
+          </div>
+          <Link href="/consultation" className="btn btn-primary text-sm sm:text-base">
+            Schedule
+          </Link>
         </div>
-        <Link
-          href="/consultation"
-          className="pill text-sm font-medium text-[#1f2329] hover:shadow-md transition-shadow whitespace-nowrap"
-        >
-          Schedule call
-        </Link>
       </header>
 
       <main>
         {/* Hero */}
-        <section className="relative section-shell py-6 md:py-16 overflow-hidden">
-          <div className="sun-corner" aria-hidden />
-          <div className="flex flex-col md:grid md:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-10 items-center relative">
-            <div className="space-y-4 sm:space-y-5">
-              <span className="handwritten-text text-lg text-[#3e879e]">
-                Calm, warm, and clinically grounded
-              </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight accent-underline">
-                Professional therapy that feels human, steady, and inviting.
-              </h1>
-              <p className="text-lg text-neutral-700 leading-relaxed">
-                Together we will create a supportive space to work through anxiety, relationship
-                transitions, and the moments that feel too heavy to carry alone. Evidence-based
-                care, delivered with warmth.
+        <section className="hero-bg">
+          <div className="container section">
+            <div className="text-center mb-8">
+              <p className="handwritten text-[#3e879e] text-xl mb-3">
+                Relationships are hard.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <Link
-                  href="/consultation"
-                  className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
-                >
-                  Schedule call
-                </Link>
-                <Link
-                  href="#services"
-                  className="rounded-full border border-[#1f2329]/10 px-6 py-3 font-medium text-[#1f2329] hover:border-[#3e879e]/50 hover:text-[#3e879e] transition-colors whitespace-nowrap"
-                >
-                  View services
-                </Link>
-              </div>
-              <div className="space-y-3 pt-2">
-                {[
-                  { title: "Anxiety & stress", note: "Grounding tools + CBT" },
-                  { title: "Relationships", note: "Couples + communication" },
-                  { title: "Life transitions", note: "Career, family, identity" },
-                ].map((item) => (
-                  <div key={item.title} className="flex items-start gap-3">
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#3e879e]/70" />
-                    <div>
-                      <p className="text-sm font-semibold text-[#1f2329]">{item.title}</p>
-                      <p className="text-sm text-neutral-600">{item.note}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
+                Reclaim the calm in yours.
+              </h1>
+              <p className="text-lg text-neutral-600 max-w-lg mx-auto">
+                Warm, evidence-based therapy for anxiety, relationships, and life transitions. 
+                Telehealth sessions across California.
+              </p>
             </div>
 
-          <div className="card-soft p-4 md:p-5 relative overflow-hidden photo-card">
-              <div className="relative rounded-2xl overflow-hidden bg-[#fff7f0]">
-            <Image
-                  src="/hannah-hero.jpg"
-                  alt="Portrait of Hannah Thayer, LMFT"
-                  width={960}
-                  height={1280}
-                  className="h-full w-full object-cover"
-                  priority
-                />
-              </div>
-              <div className="photo-note">
-                <div>
-                  <p className="text-sm font-semibold text-[#1f2329]">Warm, approachable care</p>
-                  <p className="text-xs text-neutral-600">Telehealth sessions (CA)</p>
-                </div>
-                <span className="handwritten-text text-[#f48c44] text-lg">Hannah</span>
-              </div>
+            {/* Photo */}
+            <div className="photo-frame max-w-xs mx-auto mb-8">
+              <Image
+                src="/hannah-hero.jpg"
+                alt="Hannah Thayer, LMFT"
+                width={400}
+                height={500}
+                className="w-full h-auto"
+                priority
+              />
             </div>
-          </div>
-        </section>
 
-        {/* Services */}
-        <section id="services" className="section-shell py-8 md:py-14">
-          <div className="max-w-3xl mb-10">
-            <span className="handwritten-text text-[#f48c44] text-lg">Services</span>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
-              Care that is personalized, structured, and compassionate.
-            </h2>
-            <p className="text-lg text-neutral-700 mt-4">
-              We will set clear goals together, then move at a pace that honors both your needs and
-              your capacity.
-            </p>
-          </div>
-          <div className="card-soft p-4 md:p-6 space-y-4">
-            {[
-              {
-                title: "Individual therapy",
-                color: "#3e879e",
-                desc:
-                  "Process anxiety, burnout, grief, and self-doubt with a calm, structured partner.",
-              },
-              {
-                title: "Couples counseling",
-                color: "#f48c44",
-                desc:
-                  "Strengthen communication, navigate conflict, and reconnect with shared values.",
-              },
-              {
-                title: "Work & life transitions",
-                color: "#c57b5a",
-                desc:
-                  "Career changes, caregiving, parenthood, relocation, or identity shifts—move forward with confidence.",
-              },
-            ].map((service) => (
-              <div key={service.title} className="flex gap-3">
-                <div
-                  className="h-10 w-10 rounded-full flex items-center justify-center text-white text-sm font-semibold"
-                  style={{ backgroundColor: service.color }}
-                >
-                  •
-                </div>
-                <div>
-                  <div className="handwritten-text text-lg" style={{ color: service.color }}>
-                    {service.title}
-                  </div>
-                  <p className="text-base text-neutral-700 mt-2 leading-relaxed">{service.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Approach */}
-        <section className="section-shell py-8 md:py-14">
-          <div className="max-w-3xl mb-10">
-            <span className="handwritten-text text-[#3e879e] text-lg">Approach</span>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
-              Clear steps, steady support.
-            </h2>
-            <p className="text-lg text-neutral-700 mt-4">
-              Blending CBT, mindfulness, and attachment-informed care with a warm, collaborative
-              tone.
-            </p>
-          </div>
-          <div className="card-soft p-4 md:p-6 space-y-4">
-            {[
-              {
-                title: "01 / Listen",
-                desc: "We map what matters most, define goals, and pace sessions to your comfort.",
-              },
-              {
-                title: "02 / Practice",
-                desc:
-                  "Practical tools for regulation, communication, and self-compassion between sessions.",
-              },
-              {
-                title: "03 / Integrate",
-                desc: "Sustain progress with rituals, reflections, and small changes that feel doable.",
-              },
-            ].map((step) => (
-              <div key={step.title} className="flex gap-3">
-                <div className="h-10 w-10 rounded-full bg-[#3e879e] text-white font-semibold flex items-center justify-center text-sm">
-                  {step.title.split(" ")[0]}
-                </div>
-                <div>
-                  <p className="text-sm font-semibold text-[#3e879e]">{step.title}</p>
-                  <p className="text-base text-neutral-700 mt-2 leading-relaxed">{step.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Testimonials */}
-        <section className="section-shell py-8 md:py-14">
-          <div className="max-w-3xl mb-10">
-            <span className="handwritten-text text-[#f48c44] text-lg">Client reflections</span>
-            <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
-              &ldquo;I feel calmer, clearer, and less alone.&rdquo;
-            </h2>
-          </div>
-          <div className="card-soft p-4 md:p-6 space-y-4">
-            {[
-              {
-                quote:
-                  "Hannah balances practical tools with genuine care. I finally feel like I have a roadmap.",
-                name: "Client, anxiety & life transition",
-              },
-              {
-                quote:
-                  "Our sessions helped us communicate without shutting down. The pace felt respectful and warm.",
-                name: "Couples client",
-              },
-            ].map((item) => (
-              <div key={item.name} className="space-y-2">
-                <p className="text-lg leading-relaxed text-neutral-800">“{item.quote}”</p>
-                <p className="handwritten-text text-[#3e879e] text-lg">{item.name}</p>
-                <div className="soft-divider" />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section className="section-shell pb-10">
-          <div className="card-soft p-6 md:p-8">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div className="space-y-3">
-                <span className="handwritten-text text-[#3e879e] text-lg">Next step</span>
-                <h3 className="text-2xl md:text-3xl font-semibold">
-                  Let&apos;s plan your first session.
-                </h3>
-                <p className="text-lg text-neutral-700">
-                  Telehealth appointments available across California. Use the consultation form to
-                  request your preferred time.
-                </p>
-              </div>
-              <Link
-                href="/consultation"
-                className="self-start rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
-              >
-                Schedule call
+            {/* CTA Buttons - Full width on mobile */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:justify-center">
+              <Link href="/consultation" className="btn btn-primary btn-full">
+                Schedule a consultation
+              </Link>
+              <Link href="#services" className="btn btn-secondary btn-full">
+                Learn more
               </Link>
             </div>
-        </div>
+          </div>
+        </section>
+
+        {/* Welcome section */}
+        <section className="container section">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+            Welcome
+          </h2>
+          <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+            I&apos;m Hannah, a licensed marriage and family therapist specializing in helping 
+            individuals and couples navigate anxiety, relationship challenges, and major life transitions.
+          </p>
+          <p className="text-lg text-neutral-700 leading-relaxed">
+            My approach blends evidence-based techniques with genuine warmth. Together, we&apos;ll 
+            create a supportive space where you can feel heard, understood, and equipped with 
+            practical tools for lasting change.
+          </p>
+        </section>
+
+        <div className="container"><div className="divider" /></div>
+
+        {/* Services */}
+        <section id="services" className="container section">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+            Services
+          </h2>
+          <p className="text-neutral-600 mb-6">
+            Personalized care tailored to your needs.
+          </p>
+
+          <div className="space-y-4">
+            <div className="service-item">
+              <h3 className="font-semibold text-lg text-[#3e879e] mb-2">
+                Individual Therapy
+              </h3>
+              <p className="text-neutral-700">
+                Process anxiety, burnout, grief, and self-doubt with a calm, supportive partner. 
+                We&apos;ll build practical coping tools together.
+              </p>
+            </div>
+
+            <div className="service-item">
+              <h3 className="font-semibold text-lg text-[#f48c44] mb-2">
+                Couples Counseling
+              </h3>
+              <p className="text-neutral-700">
+                Strengthen communication, navigate conflict, and reconnect with shared values. 
+                Rebuild trust and intimacy.
+              </p>
+            </div>
+
+            <div className="service-item">
+              <h3 className="font-semibold text-lg text-[#c57b5a] mb-2">
+                Life Transitions
+              </h3>
+              <p className="text-neutral-700">
+                Career changes, caregiving, parenthood, relocation, or identity shifts—move 
+                forward with confidence.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="container"><div className="divider" /></div>
+
+        {/* Approach */}
+        <section className="container section">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-2">
+            My Approach
+          </h2>
+          <p className="text-neutral-600 mb-6">
+            Clear steps, steady support.
+          </p>
+
+          <div className="space-y-6">
+            <div className="flex gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-[#3e879e] text-white flex items-center justify-center font-bold">
+                1
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Listen</p>
+                <p className="text-neutral-700">
+                  We map what matters most, define goals, and pace sessions to your comfort.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-[#3e879e] text-white flex items-center justify-center font-bold">
+                2
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Practice</p>
+                <p className="text-neutral-700">
+                  Practical tools for regulation, communication, and self-compassion.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex gap-4">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-[#3e879e] text-white flex items-center justify-center font-bold">
+                3
+              </div>
+              <div>
+                <p className="font-semibold mb-1">Integrate</p>
+                <p className="text-neutral-700">
+                  Sustain progress with rituals, reflections, and small changes that feel doable.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="container"><div className="divider" /></div>
+
+        {/* Testimonials */}
+        <section className="container section">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-6">
+            What Clients Say
+          </h2>
+
+          <div className="space-y-6">
+            <div className="quote">
+              <p className="text-lg text-neutral-800 mb-2">
+                &ldquo;Hannah balances practical tools with genuine care. I finally feel like I have a roadmap.&rdquo;
+              </p>
+              <p className="handwritten text-[#3e879e] text-lg">
+                — Client, anxiety & life transition
+              </p>
+            </div>
+
+            <div className="quote">
+              <p className="text-lg text-neutral-800 mb-2">
+                &ldquo;Our sessions helped us communicate without shutting down. The pace felt respectful and warm.&rdquo;
+              </p>
+              <p className="handwritten text-[#3e879e] text-lg">
+                — Couples client
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <div className="container"><div className="divider" /></div>
+
+        {/* CTA Section */}
+        <section className="container section">
+          <div className="card p-6 sm:p-8 text-center">
+            <p className="handwritten text-[#f48c44] text-xl mb-2">Ready to begin?</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-3">
+              Let&apos;s plan your first session.
+            </h2>
+            <p className="text-neutral-600 mb-6">
+              Telehealth appointments available across California.
+            </p>
+            <Link href="/consultation" className="btn btn-primary">
+              Schedule a consultation
+            </Link>
+          </div>
         </section>
       </main>
 
-      <footer className="section-shell pb-12 text-sm text-neutral-600">
-        <div className="soft-divider mb-6" />
-        <p>© {new Date().getFullYear()} Therapy & Wellness. All rights reserved.</p>
+      {/* Footer */}
+      <footer className="container py-8">
+        <div className="divider mb-6" />
+        <div className="text-center text-sm text-neutral-500">
+          <p className="mb-2">Hannah Thayer, LMFT · Telehealth Therapy · California</p>
+          <p>© {new Date().getFullYear()} All rights reserved.</p>
+        </div>
       </footer>
     </div>
   );
