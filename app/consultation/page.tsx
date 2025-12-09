@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Consultation() {
   return (
     <div className="min-h-screen text-[#1f2329]">
-      <header className="section-shell pt-10 pb-6 flex items-center justify-between gap-6">
+      <header className="section-shell pt-8 pb-5 flex items-center justify-between gap-4">
         <div>
           <p className="handwritten-text text-[#f48c44] text-xl">Consultation</p>
           <p className="text-sm text-neutral-600">Telehealth sessions across California</p>

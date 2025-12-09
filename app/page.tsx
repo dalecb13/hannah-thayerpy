@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen text-[#1f2329]">
-      <header className="section-shell pt-10 pb-6 flex items-center justify-between gap-6">
+      <header className="section-shell pt-8 pb-5 flex items-center justify-between gap-4">
         <div>
           <p className="handwritten-text text-[#f48c44] text-xl">Hannah Thayer, LMFT</p>
           <p className="text-sm text-neutral-600">
@@ -21,7 +21,7 @@ export default function Home() {
 
       <main>
         {/* Hero */}
-        <section className="relative section-shell py-10 md:py-20">
+        <section className="relative section-shell py-8 md:py-20 overflow-hidden">
           <div className="sun-corner" aria-hidden />
           <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 sm:gap-10 md:gap-12 items-center relative">
             <div className="space-y-5 sm:space-y-6">

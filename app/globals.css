@@ -27,6 +27,7 @@ body {
     var(--architecture-white);
   color: var(--color-foreground);
   font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
 .section-shell {
@@ -98,6 +99,7 @@ body {
   position: absolute;
   inset: 0;
   pointer-events: none;
+  overflow: hidden;
 }
 
 .sun-corner::before {
@@ -162,5 +164,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.5rem;
+  }
+
+  header,
+  section {
+    overflow-x: hidden;
   }
 }
