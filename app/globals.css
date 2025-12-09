@@ -146,3 +146,21 @@ body {
   color: #555;
   background: #fffdf8;
 }
+
+@media (max-width: 480px) {
+  .section-shell {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card-soft {
+    padding: 1.25rem;
+  }
+
+  .photo-note {
+    inset: auto 0.75rem 0.75rem 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}

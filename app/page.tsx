@@ -21,14 +21,14 @@ export default function Home() {
 
       <main>
         {/* Hero */}
-        <section className="relative section-shell py-12 md:py-20">
+        <section className="relative section-shell py-10 md:py-20">
           <div className="sun-corner" aria-hidden />
-          <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-12 items-center relative">
-            <div className="space-y-6">
+          <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 sm:gap-10 md:gap-12 items-center relative">
+            <div className="space-y-5 sm:space-y-6">
               <span className="handwritten-text text-lg text-[#3e879e]">
                 Calm, warm, and clinically grounded
               </span>
-              <h1 className="text-4xl md:text-5xl font-semibold leading-tight accent-underline">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight accent-underline">
                 Professional therapy that feels human, steady, and inviting.
               </h1>
               <p className="text-lg text-neutral-700 leading-relaxed">
