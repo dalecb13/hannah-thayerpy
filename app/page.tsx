@@ -198,28 +198,15 @@ export default function Home() {
         <section className="section-shell pb-20">
           <div className="card-soft p-8 md:p-10">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <span className="handwritten-text text-[#3e879e] text-lg">Next step</span>
                 <h3 className="text-2xl md:text-3xl font-semibold">
                   Let&apos;s plan your first session.
                 </h3>
                 <p className="text-lg text-neutral-700">
-                  Email or call to schedule. Telehealth appointments available across California.
+                  Telehealth appointments available across California. Use the consultation form to
+                  request your preferred time.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 pt-4 text-sm">
-                  <div>
-                    <p className="font-semibold text-[#1f2329]">Email</p>
-                    <p className="text-neutral-700">hello@therapywellness.com</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1f2329]">Phone</p>
-                    <p className="text-neutral-700">(555) 123-4567</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1f2329]">Hours</p>
-                    <p className="text-neutral-700">Mon–Fri: 9a–6p</p>
-                  </div>
-                </div>
               </div>
               <Link
                 href="/consultation"
@@ -227,7 +214,7 @@ export default function Home() {
               >
                 Schedule a consultation
               </Link>
-        </div>
+            </div>
           </div>
         </section>
       </main>
