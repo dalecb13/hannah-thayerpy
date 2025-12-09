@@ -109,9 +109,9 @@ export default function Consultation() {
             <div className="flex items-center gap-3">
               <button
                 type="button"
-                className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-medium shadow-md shadow-[#f48c44]/30 hover:bg-[#d76c25] transition-colors"
+                className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition-transform transition-colors whitespace-nowrap hover:-translate-y-0.5"
               >
-                Submit consultation request
+                Send request
               </button>
               <p className="text-sm text-neutral-600">Telehealth only. I will reply within 1–2 business days.</p>
             </div>

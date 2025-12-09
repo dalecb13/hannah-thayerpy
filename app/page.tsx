@@ -13,9 +13,9 @@ export default function Home() {
         </div>
         <Link
           href="/consultation"
-          className="pill text-sm font-medium text-[#1f2329] hover:shadow-md transition-shadow"
+          className="pill text-sm font-medium text-[#1f2329] hover:shadow-md transition-shadow whitespace-nowrap"
         >
-          Schedule a call
+          Schedule call
         </Link>
       </header>
 
@@ -39,15 +39,15 @@ export default function Home() {
               <div className="flex flex-wrap gap-3">
                 <Link
                   href="/consultation"
-                  className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-medium shadow-md shadow-[#f48c44]/30 hover:bg-[#d76c25] transition-colors"
+                  className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
                 >
-                  Book a consultation
+                  Schedule call
                 </Link>
                 <Link
                   href="#services"
-                  className="rounded-full border border-[#1f2329]/10 px-6 py-3 font-medium text-[#1f2329] hover:border-[#3e879e]/50 hover:text-[#3e879e] transition-colors"
+                  className="rounded-full border border-[#1f2329]/10 px-6 py-3 font-medium text-[#1f2329] hover:border-[#3e879e]/50 hover:text-[#3e879e] transition-colors whitespace-nowrap"
                 >
-                  Explore services
+                  View services
                 </Link>
               </div>
               <div className="grid sm:grid-cols-3 gap-4 pt-2">
@@ -56,7 +56,7 @@ export default function Home() {
                   { title: "Relationships", note: "Couples + communication" },
                   { title: "Life transitions", note: "Career, family, identity" },
                 ].map((item) => (
-                  <div key={item.title} className="card-soft p-4">
+                  <div key={item.title} className="card-soft p-4 max-w-[320px] w-full mx-auto sm:mx-0">
                     <p className="text-sm text-[#3e879e] font-semibold">{item.title}</p>
                     <p className="text-sm text-neutral-600 mt-1">{item.note}</p>
                   </div>
@@ -119,7 +119,7 @@ export default function Home() {
                   "Career changes, caregiving, parenthood, relocation, or identity shifts—move forward with confidence.",
               },
             ].map((service) => (
-              <div key={service.title} className="card-soft p-6">
+              <div key={service.title} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
                 <div className="handwritten-text text-lg" style={{ color: service.color }}>
                   {service.title}
                 </div>
@@ -157,7 +157,7 @@ export default function Home() {
                 desc: "Sustain progress with rituals, reflections, and small changes that feel doable.",
               },
             ].map((step) => (
-              <div key={step.title} className="card-soft p-6">
+              <div key={step.title} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
                 <p className="text-sm font-semibold text-[#3e879e]">{step.title}</p>
                 <p className="text-base text-neutral-700 mt-3 leading-relaxed">{step.desc}</p>
               </div>
@@ -186,7 +186,7 @@ export default function Home() {
                 name: "Couples client",
               },
             ].map((item) => (
-              <div key={item.name} className="card-soft p-6">
+              <div key={item.name} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
                 <p className="text-lg leading-relaxed text-neutral-800">“{item.quote}”</p>
                 <p className="handwritten-text text-[#3e879e] text-lg mt-4">{item.name}</p>
               </div>
@@ -210,9 +210,9 @@ export default function Home() {
               </div>
               <Link
                 href="/consultation"
-                className="self-start rounded-full bg-[#f48c44] text-white px-6 py-3 font-medium shadow-md shadow-[#f48c44]/30 hover:bg-[#d76c25] transition-colors"
+                className="self-start rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
               >
-                Schedule a consultation
+                Schedule call
               </Link>
             </div>
           </div>
