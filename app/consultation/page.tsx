@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Consultation() {
   return (
-    <div className="min-h-screen text-[#1f2329]">
-      <header className="section-shell pt-8 pb-5 flex items-center justify-between gap-4">
+    <div className="min-h-screen text-[#1f2329] w-full overflow-x-hidden">
+      <header className="section-shell pt-4 pb-3 flex items-center justify-between gap-2">
         <div>
           <p className="handwritten-text text-[#f48c44] text-xl">Consultation</p>
           <p className="text-sm text-neutral-600">Telehealth sessions across California</p>
@@ -17,8 +17,8 @@ export default function Consultation() {
       </header>
 
       <main>
-        <section className="section-shell pb-20">
-          <div className="max-w-3xl space-y-6">
+        <section className="section-shell py-6 pb-10">
+          <div className="space-y-4">
             <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
               Schedule a telehealth consultation
             </h1>
@@ -28,8 +28,8 @@ export default function Consultation() {
             </p>
           </div>
 
-          <div className="card-soft p-8 md:p-10 mt-10 max-w-3xl space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <div className="card-soft p-4 md:p-6 mt-6 space-y-5">
+            <div className="grid gap-4 md:grid-cols-2 md:gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-[#1f2329]" htmlFor="name">
                   Full name
@@ -38,7 +38,7 @@ export default function Consultation() {
                   id="name"
                   name="name"
                   type="text"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-[#3e879e]"
+                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
                   placeholder="Your name"
                 />
               </div>
@@ -50,13 +50,13 @@ export default function Consultation() {
                   id="email"
                   name="email"
                   type="email"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-[#3e879e]"
+                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
                   placeholder="you@example.com"
                 />
               </div>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-4 md:grid-cols-2 md:gap-6">
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-[#1f2329]" htmlFor="phone">
                   Phone (optional)
@@ -65,7 +65,7 @@ export default function Consultation() {
                   id="phone"
                   name="phone"
                   type="tel"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-[#3e879e]"
+                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
                   placeholder="(555) 123-4567"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function Consultation() {
                   id="availability"
                   name="availability"
                   type="text"
-                  className="w-full border border-[#1f2329]/10 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-[#3e879e]"
+                  className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
                   placeholder="Weekdays 3–6pm"
                 />
               </div>
@@ -91,7 +91,7 @@ export default function Consultation() {
                 id="focus"
                 name="focus"
                 rows={4}
-                className="w-full border border-[#1f2329]/10 rounded-lg px-4 py-3 bg-white focus:outline-none focus:border-[#3e879e]"
+                className="w-full border border-[#1f2329]/10 rounded-lg px-3 py-2.5 bg-white focus:outline-none focus:border-[#3e879e]"
                 placeholder="Share a few notes about what brings you to therapy..."
               />
             </div>
@@ -106,10 +106,10 @@ export default function Consultation() {
               </p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3">
               <button
                 type="button"
-                className="rounded-full bg-[#f48c44] text-white px-6 py-3 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition-transform transition-colors whitespace-nowrap hover:-translate-y-0.5"
+                className="rounded-full bg-[#f48c44] text-white px-5 py-2.5 font-semibold shadow-lg shadow-[#f48c44]/35 hover:bg-[#d76c25] transition whitespace-nowrap hover:-translate-y-0.5"
               >
                 Send request
               </button>

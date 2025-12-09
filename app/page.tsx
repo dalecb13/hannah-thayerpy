@@ -3,12 +3,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="min-h-screen text-[#1f2329]">
-      <header className="section-shell pt-8 pb-5 flex items-center justify-between gap-4">
+    <div className="min-h-screen text-[#1f2329] w-full overflow-x-hidden">
+      <header className="section-shell pt-4 pb-3 flex items-center justify-between gap-2">
         <div>
           <p className="handwritten-text text-[#f48c44] text-xl">Hannah Thayer, LMFT</p>
           <p className="text-sm text-neutral-600">
-            Therapy & wellness counseling inspired by Mediterranean calm
+            Therapy & wellness counseling with a warm, calming approach
           </p>
         </div>
         <Link
@@ -21,10 +21,10 @@ export default function Home() {
 
       <main>
         {/* Hero */}
-        <section className="relative section-shell py-8 md:py-20 overflow-hidden">
+        <section className="relative section-shell py-6 md:py-16 overflow-hidden">
           <div className="sun-corner" aria-hidden />
-          <div className="grid md:grid-cols-[1.05fr_0.95fr] gap-8 sm:gap-10 md:gap-12 items-center relative">
-            <div className="space-y-5 sm:space-y-6">
+          <div className="flex flex-col md:grid md:grid-cols-[1.05fr_0.95fr] gap-6 md:gap-10 items-center relative">
+            <div className="space-y-4 sm:space-y-5">
               <span className="handwritten-text text-lg text-[#3e879e]">
                 Calm, warm, and clinically grounded
               </span>
@@ -67,7 +67,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="card-soft p-4 md:p-6 relative overflow-hidden photo-card">
+          <div className="card-soft p-4 md:p-5 relative overflow-hidden photo-card">
               <div className="relative rounded-2xl overflow-hidden bg-[#fff7f0]">
             <Image
                   src="/hannah-hero.jpg"
@@ -90,7 +90,7 @@ export default function Home() {
         </section>
 
         {/* Services */}
-        <section id="services" className="section-shell py-16 md:py-20">
+        <section id="services" className="section-shell py-8 md:py-14">
           <div className="max-w-3xl mb-10">
             <span className="handwritten-text text-[#f48c44] text-lg">Services</span>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
@@ -101,7 +101,7 @@ export default function Home() {
               your capacity.
             </p>
           </div>
-          <div className="card-soft p-6 md:p-8 space-y-4">
+          <div className="card-soft p-4 md:p-6 space-y-4">
             {[
               {
                 title: "Individual therapy",
@@ -141,7 +141,7 @@ export default function Home() {
         </section>
 
         {/* Approach */}
-        <section className="section-shell py-16 md:py-20">
+        <section className="section-shell py-8 md:py-14">
           <div className="max-w-3xl mb-10">
             <span className="handwritten-text text-[#3e879e] text-lg">Approach</span>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
@@ -152,7 +152,7 @@ export default function Home() {
               tone.
             </p>
           </div>
-          <div className="card-soft p-6 md:p-8 space-y-4">
+          <div className="card-soft p-4 md:p-6 space-y-4">
             {[
               {
                 title: "01 / Listen",
@@ -182,14 +182,14 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="section-shell py-16 md:py-20">
+        <section className="section-shell py-8 md:py-14">
           <div className="max-w-3xl mb-10">
             <span className="handwritten-text text-[#f48c44] text-lg">Client reflections</span>
             <h2 className="text-3xl md:text-4xl font-semibold leading-tight mt-2">
               &ldquo;I feel calmer, clearer, and less alone.&rdquo;
             </h2>
           </div>
-          <div className="card-soft p-6 md:p-8 space-y-4">
+          <div className="card-soft p-4 md:p-6 space-y-4">
             {[
               {
                 quote:
@@ -212,8 +212,8 @@ export default function Home() {
         </section>
 
         {/* Contact */}
-        <section className="section-shell pb-20">
-          <div className="card-soft p-8 md:p-10">
+        <section className="section-shell pb-10">
+          <div className="card-soft p-6 md:p-8">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div className="space-y-3">
                 <span className="handwritten-text text-[#3e879e] text-lg">Next step</span>
