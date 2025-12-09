@@ -50,15 +50,18 @@ export default function Home() {
                   View services
                 </Link>
               </div>
-              <div className="grid sm:grid-cols-3 gap-4 pt-2">
+              <div className="space-y-3 pt-2">
                 {[
                   { title: "Anxiety & stress", note: "Grounding tools + CBT" },
                   { title: "Relationships", note: "Couples + communication" },
                   { title: "Life transitions", note: "Career, family, identity" },
                 ].map((item) => (
-                  <div key={item.title} className="card-soft p-4 max-w-[320px] w-full mx-auto sm:mx-0">
-                    <p className="text-sm text-[#3e879e] font-semibold">{item.title}</p>
-                    <p className="text-sm text-neutral-600 mt-1">{item.note}</p>
+                  <div key={item.title} className="flex items-start gap-3">
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-[#3e879e]/70" />
+                    <div>
+                      <p className="text-sm font-semibold text-[#1f2329]">{item.title}</p>
+                      <p className="text-sm text-neutral-600">{item.note}</p>
+                    </div>
                   </div>
                 ))}
               </div>
@@ -66,7 +69,7 @@ export default function Home() {
 
             <div className="card-soft p-4 md:p-6 relative overflow-hidden photo-card">
               <div className="relative rounded-2xl overflow-hidden bg-[#fff7f0]">
-                <Image
+            <Image
                   src="/hannah-hero.jpg"
                   alt="Portrait of Hannah Thayer, LMFT"
                   width={960}
@@ -98,7 +101,7 @@ export default function Home() {
               your capacity.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="card-soft p-6 md:p-8 space-y-4">
             {[
               {
                 title: "Individual therapy",
@@ -119,11 +122,19 @@ export default function Home() {
                   "Career changes, caregiving, parenthood, relocation, or identity shifts—move forward with confidence.",
               },
             ].map((service) => (
-              <div key={service.title} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
-                <div className="handwritten-text text-lg" style={{ color: service.color }}>
-                  {service.title}
+              <div key={service.title} className="flex gap-3">
+                <div
+                  className="h-10 w-10 rounded-full flex items-center justify-center text-white text-sm font-semibold"
+                  style={{ backgroundColor: service.color }}
+                >
+                  •
                 </div>
-                <p className="text-base text-neutral-700 mt-3 leading-relaxed">{service.desc}</p>
+                <div>
+                  <div className="handwritten-text text-lg" style={{ color: service.color }}>
+                    {service.title}
+                  </div>
+                  <p className="text-base text-neutral-700 mt-2 leading-relaxed">{service.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -141,7 +152,7 @@ export default function Home() {
               tone.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="card-soft p-6 md:p-8 space-y-4">
             {[
               {
                 title: "01 / Listen",
@@ -157,9 +168,14 @@ export default function Home() {
                 desc: "Sustain progress with rituals, reflections, and small changes that feel doable.",
               },
             ].map((step) => (
-              <div key={step.title} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
-                <p className="text-sm font-semibold text-[#3e879e]">{step.title}</p>
-                <p className="text-base text-neutral-700 mt-3 leading-relaxed">{step.desc}</p>
+              <div key={step.title} className="flex gap-3">
+                <div className="h-10 w-10 rounded-full bg-[#3e879e] text-white font-semibold flex items-center justify-center text-sm">
+                  {step.title.split(" ")[0]}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-[#3e879e]">{step.title}</p>
+                  <p className="text-base text-neutral-700 mt-2 leading-relaxed">{step.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -173,7 +189,7 @@ export default function Home() {
               &ldquo;I feel calmer, clearer, and less alone.&rdquo;
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="card-soft p-6 md:p-8 space-y-4">
             {[
               {
                 quote:
@@ -186,9 +202,10 @@ export default function Home() {
                 name: "Couples client",
               },
             ].map((item) => (
-              <div key={item.name} className="card-soft p-6 max-w-[360px] w-full mx-auto md:mx-0">
+              <div key={item.name} className="space-y-2">
                 <p className="text-lg leading-relaxed text-neutral-800">“{item.quote}”</p>
-                <p className="handwritten-text text-[#3e879e] text-lg mt-4">{item.name}</p>
+                <p className="handwritten-text text-[#3e879e] text-lg">{item.name}</p>
+                <div className="soft-divider" />
               </div>
             ))}
           </div>
@@ -215,7 +232,7 @@ export default function Home() {
                 Schedule call
               </Link>
             </div>
-          </div>
+        </div>
         </section>
       </main>
 
