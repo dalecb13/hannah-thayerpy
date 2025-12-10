@@ -22,13 +22,13 @@ export default function Home() {
           <div className="container section">
             <div className="text-center mb-8">
               <p className="handwritten text-[#3e879e] text-xl mb-3">
-                Relationships are hard.
+                You deserve support.
               </p>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-4">
-                Reclaim the calm in yours.
+                Find clarity, calm, and wellbeing.
               </h1>
               <p className="text-lg text-neutral-600 max-w-lg mx-auto">
-                Warm, evidence-based therapy for anxiety, relationships, and life transitions. 
+                Warm, evidence-based therapy for anxiety, OCD, identity, and life transitions. 
                 Telehealth sessions across California.
               </p>
             </div>
@@ -63,8 +63,9 @@ export default function Home() {
             Welcome
           </h2>
           <p className="text-lg text-neutral-700 leading-relaxed mb-4">
-            I&apos;m Hannah, a licensed marriage and family therapist specializing in helping 
-            individuals and couples navigate anxiety, relationship challenges, and major life transitions.
+            I&apos;m Hannah, a licensed therapist specializing in anxiety, OCD, identity exploration, 
+            and overall mental health and wellbeing. I help individuals work through the thoughts 
+            and patterns that feel overwhelming or stuck.
           </p>
           <p className="text-lg text-neutral-700 leading-relaxed">
             My approach blends evidence-based techniques with genuine warmth. Together, we&apos;ll 
@@ -87,31 +88,31 @@ export default function Home() {
           <div className="space-y-4">
             <div className="service-item">
               <h3 className="font-semibold text-lg text-[#3e879e] mb-2">
-                Individual Therapy
+                Anxiety &amp; OCD
               </h3>
               <p className="text-neutral-700">
-                Process anxiety, burnout, grief, and self-doubt with a calm, supportive partner. 
-                We&apos;ll build practical coping tools together.
+                Learn to manage racing thoughts, intrusive patterns, and overwhelming worry. 
+                We&apos;ll build practical tools grounded in CBT and exposure therapy.
               </p>
             </div>
 
             <div className="service-item">
               <h3 className="font-semibold text-lg text-[#f48c44] mb-2">
-                Couples Counseling
+                Identity &amp; Self-Discovery
               </h3>
               <p className="text-neutral-700">
-                Strengthen communication, navigate conflict, and reconnect with shared values. 
-                Rebuild trust and intimacy.
+                Explore questions around identity, values, and who you want to become. 
+                A supportive space for self-understanding and growth.
               </p>
             </div>
 
             <div className="service-item">
               <h3 className="font-semibold text-lg text-[#c57b5a] mb-2">
-                Life Transitions
+                Life Transitions &amp; Wellbeing
               </h3>
               <p className="text-neutral-700">
-                Career changes, caregiving, parenthood, relocation, or identity shifts—move 
-                forward with confidence.
+                Navigate career changes, burnout, grief, or major life shifts. Build resilience 
+                and move forward with confidence.
               </p>
             </div>
           </div>
@@ -181,16 +182,16 @@ export default function Home() {
                 &ldquo;Hannah balances practical tools with genuine care. I finally feel like I have a roadmap.&rdquo;
               </p>
               <p className="handwritten text-[#3e879e] text-lg">
-                — Client, anxiety & life transition
+                — Client, anxiety &amp; life transition
               </p>
             </div>
 
             <div className="quote">
               <p className="text-lg text-neutral-800 mb-2">
-                &ldquo;Our sessions helped us communicate without shutting down. The pace felt respectful and warm.&rdquo;
+                &ldquo;I felt understood from the first session. The pace was respectful and I never felt rushed.&rdquo;
               </p>
               <p className="handwritten text-[#3e879e] text-lg">
-                — Couples client
+                — Client, OCD &amp; identity
               </p>
             </div>
           </div>
