@@ -1,53 +1,62 @@
 "use client";
 
 import Link from "next/link";
-import Script from "next/script";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef } from "react";
+import { FriendlyCaptchaSDK } from "@friendlycaptcha/sdk";
 
 // Replace with your actual Friendly Captcha site key from https://friendlycaptcha.com/
 const FRIENDLY_CAPTCHA_SITE_KEY = "FCMV995O03V7RIMQ";
 
+// Create SDK instance outside component to avoid re-creation on re-renders
+const sdk = new FriendlyCaptchaSDK();
+
 export default function Consultation() {
-  const [captchaSolution, setCaptchaSolution] = useState<string | null>(null);
-  const [captchaStatus, setCaptchaStatus] = useState<"idle" | "solving" | "solved" | "error">("idle");
+  const [captchaResponse, setCaptchaResponse] = useState<string | null>(null);
+  const [captchaState, setCaptchaState] = useState<string>("init");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const widgetRef = useRef<HTMLDivElement>(null);
-  const widgetInstance = useRef<unknown>(null);
-
-  const initWidget = useCallback(() => {
-    if (!widgetRef.current || widgetInstance.current) return;
-    
-    // @ts-expect-error - friendlyChallenge is loaded via script
-    if (typeof window !== "undefined" && window.friendlyChallenge) {
-      // @ts-expect-error - friendlyChallenge is loaded via script
-      const WidgetInstance = window.friendlyChallenge.WidgetInstance;
-      
-      widgetInstance.current = new WidgetInstance(widgetRef.current, {
-        sitekey: FRIENDLY_CAPTCHA_SITE_KEY,
-        doneCallback: (solution: string) => {
-          setCaptchaSolution(solution);
-          setCaptchaStatus("solved");
-        },
-        errorCallback: () => {
-          setCaptchaStatus("error");
-        },
-        startedCallback: () => {
-          setCaptchaStatus("solving");
-        },
-      });
-    }
-  }, []);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const widgetRef = useRef<ReturnType<typeof sdk.createWidget> | null>(null);
 
   useEffect(() => {
-    // Try to init if script already loaded
-    initWidget();
-  }, [initWidget]);
+    if (!containerRef.current || widgetRef.current) return;
+
+    // Create the widget and attach it to the container
+    const widget = sdk.createWidget({
+      element: containerRef.current,
+      sitekey: FRIENDLY_CAPTCHA_SITE_KEY,
+    });
+
+    widgetRef.current = widget;
+
+    // Listen for state changes
+    widget.addEventListener("frc:widget.statechange", (event) => {
+      const detail = event.detail;
+      setCaptchaState(detail.state);
+      
+      if (detail.state === "completed") {
+        setCaptchaResponse(detail.response);
+      } else if (detail.state === "error" || detail.state === "expired") {
+        setCaptchaResponse(null);
+      }
+    });
+
+    // Start solving automatically
+    widget.start();
+
+    // Cleanup on unmount
+    return () => {
+      if (widgetRef.current) {
+        widgetRef.current.destroy();
+        widgetRef.current = null;
+      }
+    };
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    if (!captchaSolution) {
+    if (!captchaResponse) {
       alert("Please wait for verification to complete.");
       return;
     }
@@ -61,12 +70,13 @@ export default function Consultation() {
       phone: formData.get("phone"),
       availability: formData.get("availability"),
       focus: formData.get("focus"),
-      captchaSolution,
+      "frc-captcha-response": captchaResponse,
     };
 
     console.log("Form submission:", data);
     
-    // Simulate submission delay
+    // TODO: Send to your backend for verification
+    // The backend should verify the captchaResponse with Friendly Captcha API
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
     setIsSubmitting(false);
@@ -115,15 +125,10 @@ export default function Consultation() {
     );
   }
 
+  const isVerified = captchaState === "completed" && captchaResponse;
+
   return (
     <div className="min-h-screen">
-      {/* Friendly Captcha Script */}
-      <Script
-        src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.module.min.js"
-        strategy="afterInteractive"
-        onLoad={initWidget}
-      />
-
       {/* Header */}
       <header className="container py-4">
         <div className="flex items-center justify-between">
@@ -219,27 +224,23 @@ export default function Consultation() {
               />
             </div>
 
-            {/* Friendly Captcha */}
+            {/* Friendly Captcha Widget */}
             <div>
               <label className="block text-sm font-medium mb-2">
                 Verification
               </label>
-              <div 
-                ref={widgetRef}
-                className="frc-captcha" 
-                data-sitekey={FRIENDLY_CAPTCHA_SITE_KEY}
-              />
-              {captchaStatus === "solving" && (
+              <div ref={containerRef} className="frc-captcha" />
+              {captchaState === "solving" && (
                 <p className="text-xs text-neutral-500 mt-2">
                   Verifying in background...
                 </p>
               )}
-              {captchaStatus === "solved" && (
+              {isVerified && (
                 <p className="text-xs text-green-600 mt-2 flex items-center gap-1">
                   <span>✓</span> Verified
                 </p>
               )}
-              {captchaStatus === "error" && (
+              {(captchaState === "error" || captchaState === "expired") && (
                 <p className="text-xs text-red-600 mt-2">
                   Verification failed. Please refresh and try again.
                 </p>
@@ -251,8 +252,8 @@ export default function Consultation() {
               <button 
                 type="submit" 
                 className="btn btn-primary btn-full"
-                disabled={isSubmitting || captchaStatus !== "solved"}
-                style={{ opacity: isSubmitting || captchaStatus !== "solved" ? 0.6 : 1 }}
+                disabled={isSubmitting || !isVerified}
+                style={{ opacity: isSubmitting || !isVerified ? 0.6 : 1 }}
               >
                 {isSubmitting ? "Sending..." : "Send request"}
               </button>
