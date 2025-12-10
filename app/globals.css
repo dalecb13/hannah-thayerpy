@@ -176,12 +176,10 @@ body {
   border-left: 3px solid var(--orange);
 }
 
-/* Captcha placeholder */
-.captcha-placeholder {
-  border: 2px dashed rgba(31, 35, 41, 0.2);
-  border-radius: 8px;
-  padding: 1rem;
-  text-align: center;
-  color: #666;
+/* Friendly Captcha widget styling */
+.frc-captcha {
   background: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 0.75rem;
 }

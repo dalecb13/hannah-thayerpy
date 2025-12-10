@@ -1,33 +1,59 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { CaptchaFox } from "@captchafox/react";
+import Script from "next/script";
+import { useState, useEffect, useRef, useCallback } from "react";
 
-// Replace with your actual CaptchaFox site key from https://portal.captchafox.com/
-const CAPTCHAFOX_SITE_KEY = "sk_11111111000000001111111100000000";
+// Replace with your actual Friendly Captcha site key from https://friendlycaptcha.com/
+const FRIENDLY_CAPTCHA_SITE_KEY = "FCMV995O03V7RIMQ";
 
 export default function Consultation() {
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+  const [captchaSolution, setCaptchaSolution] = useState<string | null>(null);
+  const [captchaStatus, setCaptchaStatus] = useState<"idle" | "solving" | "solved" | "error">("idle");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const widgetRef = useRef<HTMLDivElement>(null);
+  const widgetInstance = useRef<unknown>(null);
 
-  const handleCaptchaVerify = (token: string) => {
-    setCaptchaToken(token);
-  };
+  const initWidget = useCallback(() => {
+    if (!widgetRef.current || widgetInstance.current) return;
+    
+    // @ts-expect-error - friendlyChallenge is loaded via script
+    if (typeof window !== "undefined" && window.friendlyChallenge) {
+      // @ts-expect-error - friendlyChallenge is loaded via script
+      const WidgetInstance = window.friendlyChallenge.WidgetInstance;
+      
+      widgetInstance.current = new WidgetInstance(widgetRef.current, {
+        sitekey: FRIENDLY_CAPTCHA_SITE_KEY,
+        doneCallback: (solution: string) => {
+          setCaptchaSolution(solution);
+          setCaptchaStatus("solved");
+        },
+        errorCallback: () => {
+          setCaptchaStatus("error");
+        },
+        startedCallback: () => {
+          setCaptchaStatus("solving");
+        },
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    // Try to init if script already loaded
+    initWidget();
+  }, [initWidget]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
-    if (!captchaToken) {
-      alert("Please complete the verification.");
+    if (!captchaSolution) {
+      alert("Please wait for verification to complete.");
       return;
     }
 
     setIsSubmitting(true);
 
-    // TODO: Send form data to your backend
-    // Include captchaToken for server-side verification
     const formData = new FormData(e.currentTarget);
     const data = {
       name: formData.get("name"),
@@ -35,7 +61,7 @@ export default function Consultation() {
       phone: formData.get("phone"),
       availability: formData.get("availability"),
       focus: formData.get("focus"),
-      captchaToken,
+      captchaSolution,
     };
 
     console.log("Form submission:", data);
@@ -91,6 +117,13 @@ export default function Consultation() {
 
   return (
     <div className="min-h-screen">
+      {/* Friendly Captcha Script */}
+      <Script
+        src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.14/widget.module.min.js"
+        strategy="afterInteractive"
+        onLoad={initWidget}
+      />
+
       {/* Header */}
       <header className="container py-4">
         <div className="flex items-center justify-between">
@@ -186,19 +219,29 @@ export default function Consultation() {
               />
             </div>
 
-            {/* CaptchaFox */}
+            {/* Friendly Captcha */}
             <div>
               <label className="block text-sm font-medium mb-2">
                 Verification
               </label>
-              <CaptchaFox
-                sitekey={CAPTCHAFOX_SITE_KEY}
-                onVerify={handleCaptchaVerify}
-                onError={(error) => console.error("Captcha error:", error)}
+              <div 
+                ref={widgetRef}
+                className="frc-captcha" 
+                data-sitekey={FRIENDLY_CAPTCHA_SITE_KEY}
               />
-              {captchaToken && (
+              {captchaStatus === "solving" && (
+                <p className="text-xs text-neutral-500 mt-2">
+                  Verifying in background...
+                </p>
+              )}
+              {captchaStatus === "solved" && (
                 <p className="text-xs text-green-600 mt-2 flex items-center gap-1">
                   <span>✓</span> Verified
+                </p>
+              )}
+              {captchaStatus === "error" && (
+                <p className="text-xs text-red-600 mt-2">
+                  Verification failed. Please refresh and try again.
                 </p>
               )}
             </div>
@@ -208,8 +251,8 @@ export default function Consultation() {
               <button 
                 type="submit" 
                 className="btn btn-primary btn-full"
-                disabled={isSubmitting || !captchaToken}
-                style={{ opacity: isSubmitting || !captchaToken ? 0.6 : 1 }}
+                disabled={isSubmitting || captchaStatus !== "solved"}
+                style={{ opacity: isSubmitting || captchaStatus !== "solved" ? 0.6 : 1 }}
               >
                 {isSubmitting ? "Sending..." : "Send request"}
               </button>
