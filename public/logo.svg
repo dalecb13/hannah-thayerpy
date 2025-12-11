@@ -1,67 +1,37 @@
 <svg viewBox="0 0 56 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Brain-tree logo: 1px strokes, detailed folds, clear hemispheres -->
+  <!-- Modern geometric brain-tree logo -->
   
   <!-- Tree trunk -->
-  <path 
-    d="M28 42 L28 56" 
-    stroke="#c57b5a" 
-    stroke-width="1" 
-    stroke-linecap="round"
-  />
-  <!-- Roots -->
-  <path 
-    d="M28 56 L24 59 M28 56 L28 61 M28 56 L32 59" 
-    stroke="#c57b5a" 
-    stroke-width="1" 
-    stroke-linecap="round"
-  />
+  <line x1="28" y1="42" x2="28" y2="56" stroke="#c57b5a" stroke-width="1.5" stroke-linecap="round"/>
   
-  <!-- Left hemisphere outline -->
+  <!-- Left hemisphere - clean arc -->
   <path 
-    d="M28 6 
-       C23 6 18 8 15 12
-       C11 17 9 23 9 29
-       C9 35 11 39 15 41
-       C19 43 24 42 28 42" 
+    d="M28 8 C18 8 10 16 10 28 C10 40 18 42 28 42" 
     stroke="#3e879e" 
-    stroke-width="1" 
+    stroke-width="1.5" 
     stroke-linecap="round"
-    stroke-linejoin="round"
     fill="none"
   />
   
-  <!-- Right hemisphere outline -->
+  <!-- Right hemisphere - clean arc -->
   <path 
-    d="M28 6 
-       C33 6 38 8 41 12
-       C45 17 47 23 47 29
-       C47 35 45 39 41 41
-       C37 43 32 42 28 42" 
+    d="M28 8 C38 8 46 16 46 28 C46 40 38 42 28 42" 
     stroke="#3e879e" 
-    stroke-width="1" 
+    stroke-width="1.5" 
     stroke-linecap="round"
-    stroke-linejoin="round"
     fill="none"
   />
   
   <!-- Central fissure -->
-  <path d="M28 6 L28 42" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
+  <line x1="28" y1="8" x2="28" y2="42" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
   
-  <!-- Left hemisphere folds -->
-  <path d="M15 14 C18 12 21 14 22 17 C23 20 20 21 17 19" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M12 21 C15 19 19 21 20 24 C21 27 18 28 14 26" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M11 29 C14 27 18 29 19 32 C20 35 16 36 12 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M14 37 C17 35 20 37 21 39" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M21 10 C22 14 23 19 23 24" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M22 27 C23 32 23 36 22 39" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M18 11 C19 13 19 16 18 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <!-- Left hemisphere folds - clean arcs -->
+  <path d="M12 18 Q18 15 26 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M11 26 Q17 23 26 26" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M12 34 Q18 31 26 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
   
-  <!-- Right hemisphere folds -->
-  <path d="M41 14 C38 12 35 14 34 17 C33 20 36 21 39 19" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M44 21 C41 19 37 21 36 24 C35 27 38 28 42 26" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M45 29 C42 27 38 29 37 32 C36 35 40 36 44 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M42 37 C39 35 36 37 35 39" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M35 10 C34 14 33 19 33 24" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M34 27 C33 32 33 36 34 39" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M38 11 C37 13 37 16 38 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <!-- Right hemisphere folds - clean arcs -->
+  <path d="M44 18 Q38 15 30 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M45 26 Q39 23 30 26" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M44 34 Q38 31 30 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
 </svg>

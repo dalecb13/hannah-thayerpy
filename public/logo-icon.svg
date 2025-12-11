@@ -1,65 +1,37 @@
 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Brain-tree icon: 1px strokes, more folds, clear hemispheres -->
+  <!-- Modern geometric brain-tree icon -->
   
-  <!-- Tree trunk/stem -->
-  <path 
-    d="M24 34 L24 44" 
-    stroke="#c57b5a" 
-    stroke-width="1" 
-    stroke-linecap="round"
-  />
-  <!-- Roots -->
-  <path 
-    d="M24 44 L21 46 M24 44 L24 47 M24 44 L27 46" 
-    stroke="#c57b5a" 
-    stroke-width="1" 
-    stroke-linecap="round"
-  />
+  <!-- Tree trunk -->
+  <line x1="24" y1="34" x2="24" y2="44" stroke="#c57b5a" stroke-width="1.5" stroke-linecap="round"/>
   
-  <!-- Left hemisphere outline -->
+  <!-- Left hemisphere - clean arc -->
   <path 
-    d="M24 6 
-       C20 6 16 7 14 10
-       C11 14 10 18 10 22
-       C10 26 11 29 14 31
-       C17 33 21 34 24 34" 
+    d="M24 8 C16 8 10 14 10 22 C10 30 16 34 24 34" 
     stroke="#3e879e" 
-    stroke-width="1" 
+    stroke-width="1.5" 
     stroke-linecap="round"
-    stroke-linejoin="round"
     fill="none"
   />
   
-  <!-- Right hemisphere outline -->
+  <!-- Right hemisphere - clean arc -->
   <path 
-    d="M24 6 
-       C28 6 32 7 34 10
-       C37 14 38 18 38 22
-       C38 26 37 29 34 31
-       C31 33 27 34 24 34" 
+    d="M24 8 C32 8 38 14 38 22 C38 30 32 34 24 34" 
     stroke="#3e879e" 
-    stroke-width="1" 
+    stroke-width="1.5" 
     stroke-linecap="round"
-    stroke-linejoin="round"
     fill="none"
   />
   
-  <!-- Central fissure (dividing line) -->
-  <path d="M24 6 L24 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
+  <!-- Central fissure -->
+  <line x1="24" y1="8" x2="24" y2="34" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
   
-  <!-- Left hemisphere folds (gyri) -->
-  <path d="M14 12 C16 11 18 12 19 14 C20 16 18 17 16 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M12 17 C14 16 17 17 18 19 C19 21 17 22 14 21" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M12 23 C14 22 17 23 18 25 C19 27 16 28 13 27" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M15 29 C17 28 19 29 20 31" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M19 10 C20 12 21 15 21 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M20 20 C21 23 21 26 20 29" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <!-- Left hemisphere folds - clean horizontal curves -->
+  <path d="M12 16 Q17 14 22 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M11 22 Q16 20 22 22" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M12 28 Q17 26 22 28" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
   
-  <!-- Right hemisphere folds (gyri) -->
-  <path d="M34 12 C32 11 30 12 29 14 C28 16 30 17 32 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M36 17 C34 16 31 17 30 19 C29 21 31 22 34 21" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M36 23 C34 22 31 23 30 25 C29 27 32 28 35 27" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M33 29 C31 28 29 29 28 31" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M29 10 C28 12 27 15 27 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M28 20 C27 23 27 26 28 29" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <!-- Right hemisphere folds - clean horizontal curves -->
+  <path d="M36 16 Q31 14 26 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M37 22 Q32 20 26 22" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M36 28 Q31 26 26 28" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
 </svg>
