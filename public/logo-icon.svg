@@ -1,0 +1,43 @@
+<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Simplified icon version - brain-tree mark -->
+  <!-- Trunk -->
+  <path 
+    d="M20 36 C20 36 19.5 31 20 28 C20.5 25 20 23 20 23" 
+    stroke="#c57b5a" 
+    stroke-width="2.5" 
+    stroke-linecap="round"
+  />
+  <!-- Brain canopy outline -->
+  <path 
+    d="M8 16 
+       C6 13 7 9 10 7 
+       C13 5 16 6 18 8
+       C19 6 20 5 20 5
+       C20 5 21 6 22 8
+       C24 6 27 5 30 7
+       C33 9 34 13 32 16
+       C30 19 27 20 24 20
+       C22 20 20 19 20 19
+       C20 19 18 20 16 20
+       C13 20 10 19 8 16Z" 
+    stroke="#3e879e" 
+    stroke-width="2" 
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Brain detail lines -->
+  <path 
+    d="M12 12 C14 11 15 13 14 15
+       M28 12 C26 11 25 13 26 15
+       M17 10 C18 12 20 13 20 13 C20 13 22 12 23 10" 
+    stroke="#3e879e" 
+    stroke-width="1.2" 
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Accent dots -->
+  <circle cx="13" cy="7" r="1.2" fill="#f48c44"/>
+  <circle cx="27" cy="7" r="1.2" fill="#f48c44"/>
+</svg>
+

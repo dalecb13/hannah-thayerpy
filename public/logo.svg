@@ -1,0 +1,76 @@
+<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tree trunk with hand-drawn style -->
+  <path 
+    d="M24 42 C24 42 23.5 36 24 32 C24.5 28 24 26 24 26" 
+    stroke="#c57b5a" 
+    stroke-width="3" 
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Roots -->
+  <path 
+    d="M24 42 C22 44 20 45 18 45 M24 42 C26 44 28 45 30 45" 
+    stroke="#c57b5a" 
+    stroke-width="2" 
+    stroke-linecap="round"
+  />
+  <!-- Brain-shaped canopy - left hemisphere -->
+  <path 
+    d="M12 18 
+       C10 16 9 13 10 10 
+       C11 7 14 5 17 5 
+       C19 5 21 6 22 8
+       C22.5 6 23 5 24 5" 
+    stroke="#3e879e" 
+    stroke-width="2.5" 
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Brain-shaped canopy - right hemisphere -->
+  <path 
+    d="M36 18 
+       C38 16 39 13 38 10 
+       C37 7 34 5 31 5 
+       C29 5 27 6 26 8
+       C25.5 6 25 5 24 5" 
+    stroke="#3e879e" 
+    stroke-width="2.5" 
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Brain folds/convolutions - left -->
+  <path 
+    d="M14 14 C16 12 18 13 19 15 C20 17 18 19 16 18
+       M11 16 C12 18 14 20 17 19
+       M19 10 C20 12 19 14 17 14" 
+    stroke="#3e879e" 
+    stroke-width="1.5" 
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Brain folds/convolutions - right -->
+  <path 
+    d="M34 14 C32 12 30 13 29 15 C28 17 30 19 32 18
+       M37 16 C36 18 34 20 31 19
+       M29 10 C28 12 29 14 31 14" 
+    stroke="#3e879e" 
+    stroke-width="1.5" 
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Central connection / corpus callosum as branch -->
+  <path 
+    d="M20 16 C22 14 24 13 24 13 C24 13 26 14 28 16" 
+    stroke="#3e879e" 
+    stroke-width="1.5" 
+    stroke-linecap="round"
+    fill="none"
+  />
+  <!-- Small leaves/growth elements -->
+  <circle cx="15" cy="8" r="1.5" fill="#f48c44" opacity="0.8"/>
+  <circle cx="33" cy="8" r="1.5" fill="#f48c44" opacity="0.8"/>
+  <circle cx="24" cy="4" r="1.2" fill="#f48c44" opacity="0.6"/>
+</svg>
+

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useRef } from "react";
 import { useCaptchaHook } from "@aacn.eu/use-friendly-captcha";
 import Form from 'next/form'
@@ -59,7 +60,8 @@ export default function Consultation() {
         <div className="min-h-screen">
             <header className="container py-4">
             <div className="flex items-center justify-between">
-                <div>
+                <div className="flex items-center gap-2">
+                <Image src="/logo-icon.svg" alt="Logo" width={32} height={32} />
                 <p className="handwritten text-[#f48c44] text-xl">Consultation</p>
                 </div>
                 <Link href="/" className="btn btn-secondary text-sm">
@@ -103,7 +105,8 @@ export default function Consultation() {
         {/* Header */}
             <header className="container py-4">
                 <div className="flex items-center justify-between">
-                <div>
+                <div className="flex items-center gap-2">
+                    <Image src="/logo-icon.svg" alt="Logo" width={32} height={32} />
                     <p className="handwritten text-[#f48c44] text-xl">Consultation</p>
                 </div>
                 <Link href="/" className="btn btn-secondary text-sm">
