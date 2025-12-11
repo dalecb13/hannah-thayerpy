@@ -15,12 +15,9 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Hannah Thayer, LPCC | Telehealth Therapy California",
+  title: "Therapy & Wellness | Mediterranean-Inspired Healing",
   description:
-    "Warm, evidence-based telehealth therapy for anxiety, OCD, identity, and life transitions across California.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+    "Professional therapy services in a warm, welcoming environment inspired by Mediterranean tranquility",
 };
 
 export default function RootLayout({

@@ -7,17 +7,10 @@ export default function Home() {
       {/* Header */}
       <header className="container py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 min-w-0">
-            <Image 
-              src="/logo-icon.svg" 
-              alt="Logo" 
-              width={36} 
-              height={36}
-              className="shrink-0"
-            />
-            <span className="handwritten text-[#f48c44] text-xl sm:text-2xl truncate">Hannah Thayer, LPCC</span>
-          </Link>
-          <Link href="/consultation" className="btn btn-primary text-sm sm:text-base shrink-0">
+          <div className="min-w-0 flex-1">
+            <p className="handwritten text-[#f48c44] text-xl sm:text-2xl">Hannah Thayer, LPCC</p>
+          </div>
+          <Link href="/consultation" className="btn btn-primary text-sm sm:text-base">
             Schedule
           </Link>
         </div>
