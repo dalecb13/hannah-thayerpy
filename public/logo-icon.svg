@@ -1,75 +1,65 @@
 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Phosphor-style brain with tree stem -->
+  <!-- Brain-tree icon: 1px strokes, more folds, clear hemispheres -->
   
-  <!-- Tree trunk/stem growing down from brain -->
+  <!-- Tree trunk/stem -->
   <path 
-    d="M24 32 L24 44" 
+    d="M24 34 L24 44" 
     stroke="#c57b5a" 
-    stroke-width="2" 
+    stroke-width="1" 
     stroke-linecap="round"
   />
-  <!-- Small roots -->
+  <!-- Roots -->
   <path 
-    d="M24 44 L20 47 M24 44 L28 47" 
+    d="M24 44 L21 46 M24 44 L24 47 M24 44 L27 46" 
     stroke="#c57b5a" 
-    stroke-width="1.5" 
+    stroke-width="1" 
     stroke-linecap="round"
   />
   
-  <!-- Brain - Left hemisphere (Phosphor style: clean curves, consistent stroke) -->
+  <!-- Left hemisphere outline -->
   <path 
-    d="M24 8 
-       C24 8 20 8 17 10
-       C14 12 12 15 12 19
-       C12 23 14 26 17 28
-       C20 30 24 30 24 30" 
+    d="M24 6 
+       C20 6 16 7 14 10
+       C11 14 10 18 10 22
+       C10 26 11 29 14 31
+       C17 33 21 34 24 34" 
     stroke="#3e879e" 
-    stroke-width="2" 
+    stroke-width="1" 
     stroke-linecap="round"
     stroke-linejoin="round"
     fill="none"
   />
   
-  <!-- Brain - Right hemisphere -->
+  <!-- Right hemisphere outline -->
   <path 
-    d="M24 8 
-       C24 8 28 8 31 10
-       C34 12 36 15 36 19
-       C36 23 34 26 31 28
-       C28 30 24 30 24 30" 
+    d="M24 6 
+       C28 6 32 7 34 10
+       C37 14 38 18 38 22
+       C38 26 37 29 34 31
+       C31 33 27 34 24 34" 
     stroke="#3e879e" 
-    stroke-width="2" 
+    stroke-width="1" 
     stroke-linecap="round"
     stroke-linejoin="round"
     fill="none"
   />
   
-  <!-- Brain folds - left (simple Phosphor-style curves) -->
-  <path d="M16 15 C18 14 19 16 18 18" stroke="#3e879e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <path d="M15 21 C17 20 19 22 17 24" stroke="#3e879e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Central fissure (dividing line) -->
+  <path d="M24 6 L24 34" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
   
-  <!-- Brain folds - right -->
-  <path d="M32 15 C30 14 29 16 30 18" stroke="#3e879e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  <path d="M33 21 C31 20 29 22 31 24" stroke="#3e879e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <!-- Left hemisphere folds (gyri) -->
+  <path d="M14 12 C16 11 18 12 19 14 C20 16 18 17 16 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M12 17 C14 16 17 17 18 19 C19 21 17 22 14 21" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M12 23 C14 22 17 23 18 25 C19 27 16 28 13 27" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M15 29 C17 28 19 29 20 31" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M19 10 C20 12 21 15 21 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M20 20 C21 23 21 26 20 29" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
   
-  <!-- Central division -->
-  <path d="M24 12 L24 26" stroke="#3e879e" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-  
-  <!-- Small leaf sprouting from top -->
-  <path 
-    d="M24 8 C24 5 26 3 29 3 C29 6 27 8 24 8" 
-    stroke="#f48c44" 
-    stroke-width="1.5" 
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    fill="none"
-  />
-  <path 
-    d="M24 8 C24 5 22 3 19 3 C19 6 21 8 24 8" 
-    stroke="#f48c44" 
-    stroke-width="1.5" 
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    fill="none"
-  />
+  <!-- Right hemisphere folds (gyri) -->
+  <path d="M34 12 C32 11 30 12 29 14 C28 16 30 17 32 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M36 17 C34 16 31 17 30 19 C29 21 31 22 34 21" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M36 23 C34 22 31 23 30 25 C29 27 32 28 35 27" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M33 29 C31 28 29 29 28 31" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M29 10 C28 12 27 15 27 18" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
+  <path d="M28 20 C27 23 27 26 28 29" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
 </svg>
