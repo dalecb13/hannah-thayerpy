@@ -49,7 +49,7 @@ export default function Consultation() {
         
         // TODO: Send to your backend for verification
         // The backend should verify the captchaResponse with Friendly Captcha API
-        await new Promise((resolve) => setTimeout(resolve, 1000));
+        
         
         setSubmitted(true);
     };
