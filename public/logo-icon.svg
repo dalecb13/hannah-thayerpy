@@ -1,37 +1,47 @@
 <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Modern geometric brain-tree icon -->
+  <!-- Brain with leaf - inspired by reference -->
   
-  <!-- Tree trunk -->
-  <line x1="24" y1="34" x2="24" y2="44" stroke="#c57b5a" stroke-width="1.5" stroke-linecap="round"/>
-  
-  <!-- Left hemisphere - clean arc -->
+  <!-- Brain outline with bumpy lobes -->
   <path 
-    d="M24 8 C16 8 10 14 10 22 C10 30 16 34 24 34" 
+    d="M24 40 
+       C20 40 16 38 14 36
+       C11 33 9 30 8 26
+       C7 22 8 18 10 15
+       C11 13 13 11 15 10
+       C14 8 14 6 16 5
+       C18 4 20 5 21 6
+       C22 5 24 4 26 4
+       C28 4 30 5 31 6
+       C32 5 34 4 36 5
+       C38 6 38 8 37 10
+       C39 11 41 13 42 15
+       C44 18 45 22 44 26
+       C43 30 41 33 38 36
+       C36 38 32 40 28 40
+       C26 40 25 40 24 40Z" 
     stroke="#3e879e" 
+    stroke-width="3" 
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  
+  <!-- Leaf overlapping brain -->
+  <path 
+    d="M12 38 
+       C12 38 14 32 18 26
+       C22 20 28 14 36 10
+       C36 10 34 18 30 26
+       C26 34 20 40 12 38Z" 
+    fill="#f48c44"
+  />
+  
+  <!-- Leaf vein/stem -->
+  <path 
+    d="M12 38 C18 32 26 22 36 10" 
+    stroke="white" 
     stroke-width="1.5" 
     stroke-linecap="round"
     fill="none"
   />
-  
-  <!-- Right hemisphere - clean arc -->
-  <path 
-    d="M24 8 C32 8 38 14 38 22 C38 30 32 34 24 34" 
-    stroke="#3e879e" 
-    stroke-width="1.5" 
-    stroke-linecap="round"
-    fill="none"
-  />
-  
-  <!-- Central fissure -->
-  <line x1="24" y1="8" x2="24" y2="34" stroke="#3e879e" stroke-width="1" stroke-linecap="round"/>
-  
-  <!-- Left hemisphere folds - clean horizontal curves -->
-  <path d="M12 16 Q17 14 22 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M11 22 Q16 20 22 22" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M12 28 Q17 26 22 28" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  
-  <!-- Right hemisphere folds - clean horizontal curves -->
-  <path d="M36 16 Q31 14 26 16" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M37 22 Q32 20 26 22" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
-  <path d="M36 28 Q31 26 26 28" stroke="#3e879e" stroke-width="1" stroke-linecap="round" fill="none"/>
 </svg>
