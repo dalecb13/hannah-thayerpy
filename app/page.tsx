@@ -29,21 +29,21 @@ export default function Home() {
               </h1>
               <p className="text-lg text-neutral-600 max-w-lg mx-auto mb-4">
                 Warm, evidence-based therapy for anxiety, OCD, identity, and life transitions. 
-                Telehealth sessions across California.
+                Telehealth sessions in California.
               </p>
               <span className="badge">Se habla español</span>
             </div>
 
             {/* Photo */}
             <div className="photo-frame max-w-xs mx-auto mb-8">
-              <Image
-                src="/hannah-hero.jpg"
+        <Image
+                src="/hannah-thayer-py-background.png"
                 alt="Hannah Thayer, LPCC"
                 width={400}
                 height={500}
                 className="w-full h-auto"
-                priority
-              />
+          priority
+        />
             </div>
 
             {/* CTA Buttons - Full width on mobile */}
@@ -60,19 +60,32 @@ export default function Home() {
 
         {/* About Me */}
         <section id="about" className="container section">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4">
-            About Me
-          </h2>
-          <p className="text-lg text-neutral-700 leading-relaxed mb-4">
-            Hi! My name is Hannah Thayer and I am a Licensed Professional Clinical Counselor (LPCC) 
-            with 5 years of clinical experience counseling individuals, couples, families, and groups. 
-            As a therapist, I find it fulfilling to see clients move towards growth while also becoming 
-            more comfortable with themselves and their needs as a person.
-          </p>
-          <div className="flex flex-wrap gap-3 mt-6">
-            <span className="credential-badge">5+ years experience</span>
-            <span className="credential-badge">3,000+ client hours</span>
-            <span className="credential-badge">English &amp; Spanish</span>
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <div className="w-48 sm:w-56 md:w-64 flex-shrink-0">
+              <Image
+                src="/hannah-portrait.jpg"
+                alt="Hannah Thayer, LPCC"
+                width={256}
+                height={320}
+                className="rounded-xl shadow-md w-full h-auto"
+              />
+            </div>
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+                About Me
+              </h2>
+              <p className="text-lg text-neutral-700 leading-relaxed mb-4">
+                Hi! My name is Hannah Thayer and I am a Licensed Professional Clinical Counselor (LPCC) 
+                with 5 years of clinical experience counseling individuals, couples, families, and groups. 
+                As a therapist, I find it fulfilling to see clients move towards growth while also becoming 
+                more comfortable with themselves and their needs as a person.
+              </p>
+              <div className="flex flex-wrap gap-3 mt-6">
+                <span className="credential-badge">5+ years experience</span>
+                <span className="credential-badge">3,000+ client hours</span>
+                <span className="credential-badge">English &amp; Spanish</span>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -289,15 +302,15 @@ export default function Home() {
               Let&apos;s plan your first session.
             </h2>
             <p className="text-neutral-600 mb-4">
-              Telehealth appointments available across California.
+              Telehealth appointments available in California.
             </p>
             <span className="badge mb-4">Se habla español</span>
             <div className="mt-4">
               <Link href="/consultation" className="btn btn-primary">
                 Schedule a consultation
               </Link>
-            </div>
-          </div>
+        </div>
+        </div>
         </section>
       </main>
 

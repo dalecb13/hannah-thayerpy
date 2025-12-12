@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Caveat, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const caveat = Caveat({
@@ -14,10 +15,22 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
 });
 
+const symphony = localFont({
+  src: "../public/fonts/Symphony.otf",
+  variable: "--font-symphony",
+  display: "swap",
+});
+
+const awesomeLathusca = localFont({
+  src: "../public/fonts/AwesomeLathusca.ttf",
+  variable: "--font-awesome-lathusca",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Therapy & Wellness | Mediterranean-Inspired Healing",
+  title: "Hannah Thayer, LPCC",
   description:
-    "Professional therapy services in a warm, welcoming environment inspired by Mediterranean tranquility",
+    "Professional therapy services in a warm, welcoming environment for anxiety, OCD, identity, transitions, and life's difficult moments.",
 };
 
 export default function RootLayout({
@@ -27,7 +40,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${caveat.variable} ${dmSans.variable} antialiased`}>
+      <body className={`${caveat.variable} ${dmSans.variable} ${symphony.variable} ${awesomeLathusca.variable} antialiased`}>
         {children}
       </body>
     </html>

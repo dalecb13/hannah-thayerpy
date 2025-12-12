@@ -118,7 +118,7 @@ export default function Consultation() {
                     Schedule a consultation
                 </h1>
                 <p className="text-neutral-600 mb-6">
-                    Telehealth sessions available across California. Fill out the form below and 
+                    Telehealth sessions available in California. Fill out the form below and 
                     I&apos;ll follow up within 1–2 business days.
                 </p>
 
