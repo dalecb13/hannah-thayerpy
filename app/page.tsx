@@ -89,10 +89,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container"><div className="divider" /></div>
-
         {/* My Approach */}
-        <section className="container section">
+        <section className="section-alt">
+          <div className="container section">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             My Approach
           </h2>
@@ -153,9 +152,8 @@ export default function Home() {
               </p>
             </div>
           </div>
+          </div>
         </section>
-
-        <div className="container"><div className="divider" /></div>
 
         {/* Your First Session */}
         <section className="container section">
@@ -216,10 +214,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container"><div className="divider" /></div>
-
         {/* How I Set Goals */}
-        <section className="container section">
+        <section className="section-alt">
+          <div className="container section">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             How I Set Goals
           </h2>
@@ -227,18 +224,22 @@ export default function Home() {
             Focused sessions, meaningful progress.
           </p>
 
-          <p className="text-neutral-700 leading-relaxed mb-4">
+          <p className="text-neutral-700 leading-relaxed mb-6">
             I approach goal setting with clients as an ongoing thing. I prefer to have a goal for 
             each session and like to discuss that goal at the beginning of every meeting to help 
             the session stay focused and productive for the client.
           </p>
-          <p className="text-lg text-[#3e879e] font-medium">
-            I believe that there is no goal that is too small—and that understanding one&apos;s 
-            goals can help the client see a bigger picture.
-          </p>
+          
+          {/* Pull Quote */}
+          <div className="relative bg-[#3e879e]/5 rounded-xl p-6 pl-8 border-l-4 border-[#3e879e]">
+            <span className="absolute top-2 left-3 text-5xl text-[#3e879e]/20 font-serif leading-none">&ldquo;</span>
+            <p className="text-xl text-[#3e879e] font-medium leading-relaxed">
+              I believe that there is no goal that is too small—and that understanding one&apos;s 
+              goals can help the client see a bigger picture.
+            </p>
+          </div>
+          </div>
         </section>
-
-        <div className="container"><div className="divider" /></div>
 
         {/* Services */}
         <section id="services" className="container section">
@@ -297,10 +298,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container"><div className="divider" /></div>
-
         {/* Recommended Reading */}
-        <section className="container section">
+        <section className="section-alt">
+          <div className="container section">
           <h2 className="text-2xl sm:text-3xl font-bold mb-2">
             Recommended Reading
           </h2>
@@ -309,39 +309,80 @@ export default function Home() {
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4">
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">Adult Children of Emotionally Immature Parents</h3>
-              <p className="text-sm text-neutral-600">Understanding childhood emotional neglect and healing from its effects.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#3e879e]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#3e879e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">Adult Children of Emotionally Immature Parents</h3>
+                <p className="text-sm text-neutral-600">Understanding childhood emotional neglect and healing from its effects.</p>
+              </div>
             </div>
 
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">The Body Keeps the Score</h3>
-              <p className="text-sm text-neutral-600">How trauma reshapes the body and brain, and paths toward recovery.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#f48c44]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#f48c44]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">The Body Keeps the Score</h3>
+                <p className="text-sm text-neutral-600">How trauma reshapes the body and brain, and paths toward recovery.</p>
+              </div>
             </div>
 
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">Attached</h3>
-              <p className="text-sm text-neutral-600">The science of adult attachment and how it shapes our relationships.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#c57b5a]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#c57b5a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">Attached</h3>
+                <p className="text-sm text-neutral-600">The science of adult attachment and how it shapes our relationships.</p>
+              </div>
             </div>
 
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">My Grandmother&apos;s Hands</h3>
-              <p className="text-sm text-neutral-600">Racialized trauma and the pathway to mending our hearts and bodies.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#3e879e]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#3e879e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">My Grandmother&apos;s Hands</h3>
+                <p className="text-sm text-neutral-600">Racialized trauma and the pathway to mending our hearts and bodies.</p>
+              </div>
             </div>
 
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">No Bad Parts</h3>
-              <p className="text-sm text-neutral-600">Internal Family Systems and healing the parts that carry our pain.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#f48c44]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#f48c44]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">No Bad Parts</h3>
+                <p className="text-sm text-neutral-600">Internal Family Systems and healing the parts that carry our pain.</p>
+              </div>
             </div>
 
-            <div className="book-card">
-              <h3 className="font-semibold text-neutral-800 mb-1">The Happiness Trap</h3>
-              <p className="text-sm text-neutral-600">Using ACT to stop struggling and start living a meaningful life.</p>
+            <div className="book-card flex gap-4">
+              <div className="w-8 h-10 rounded bg-[#c57b5a]/10 flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#c57b5a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">The Happiness Trap</h3>
+                <p className="text-sm text-neutral-600">Using ACT to stop struggling and start living a meaningful life.</p>
+              </div>
             </div>
           </div>
+          </div>
         </section>
-
-        <div className="container"><div className="divider" /></div>
 
         {/* Testimonials */}
         <section className="container section">
@@ -370,10 +411,9 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="container"><div className="divider" /></div>
-
         {/* CTA Section */}
-        <section className="container section">
+        <section className="section-alt">
+          <div className="container section">
           <div className="card p-6 sm:p-8 text-center">
             <p className="handwritten text-[#f48c44] text-xl mb-2">Ready to begin?</p>
             <h2 className="text-2xl sm:text-3xl font-bold mb-3">
@@ -387,8 +427,9 @@ export default function Home() {
               <Link href="/consultation" className="btn btn-primary">
                 Schedule a consultation
               </Link>
-        </div>
-        </div>
+            </div>
+          </div>
+          </div>
         </section>
       </main>
 
