@@ -1,0 +1,62 @@
+<svg viewBox="0 0 48 48" width="48" height="48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="brainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9C97C"/>
+      <stop offset="50%" stop-color="#F5A864"/>
+      <stop offset="100%" stop-color="#E8845C"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Left leaf -->
+  <path 
+    d="M20 16 C20 16 17 9 20 4 C23 9 20 16 20 16 C20 16 15 11 20 4" 
+    fill="#5BBD8C"
+  />
+  
+  <!-- Right leaf -->
+  <path 
+    d="M28 16 C28 16 31 9 28 4 C25 9 28 16 28 16 C28 16 33 11 28 4" 
+    fill="#4DAF7C"
+  />
+  
+  <!-- Brain - Left hemisphere -->
+  <path 
+    d="M24 14
+       C21 14 19 13 16 15
+       C13 17 10 18 9 21
+       C8 24 8 27 9 30
+       C10 33 9 34 10 37
+       C11 40 14 42 17 42
+       C20 42 21 40 23 39
+       C24 38 24 36 24 34
+       L24 14Z" 
+    fill="url(#brainGradient)"
+  />
+  
+  <!-- Brain - Right hemisphere -->
+  <path 
+    d="M24 14
+       C27 14 29 13 32 15
+       C35 17 38 18 39 21
+       C40 24 40 27 39 30
+       C38 33 39 34 38 37
+       C37 40 34 42 31 42
+       C28 42 27 40 25 39
+       C24 38 24 36 24 34
+       L24 14Z" 
+    fill="url(#brainGradient)"
+  />
+  
+  <!-- Brain folds - Left -->
+  <path d="M12 22 Q15 21 18 23 Q21 25 18 28" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M10 28 Q14 27 17 30 Q20 33 15 35" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M13 36 Q16 35 19 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Brain folds - Right -->
+  <path d="M36 22 Q33 21 30 23 Q27 25 30 28" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M38 28 Q34 27 31 30 Q28 33 33 35" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  <path d="M35 36 Q32 35 29 38" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+  
+  <!-- Center line -->
+  <line x1="24" y1="14" x2="24" y2="42" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+</svg>
