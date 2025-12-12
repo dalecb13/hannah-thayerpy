@@ -61,7 +61,7 @@ export default function Home() {
         {/* About Me */}
         <section id="about" className="container section">
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-48 sm:w-56 md:w-64 flex-shrink-0">
+            <div className="w-48 sm:w-56 md:w-64 shrink-0">
               <Image
                 src="/hannah-portrait.jpg"
                 alt="Hannah Thayer, LPCC"
@@ -100,29 +100,56 @@ export default function Home() {
             Collaborative, evidence-based, and tailored to you.
           </p>
 
-          <div className="space-y-6">
-            <div>
-              <h3 className="font-semibold text-lg text-[#3e879e] mb-2">Therapeutic Methods</h3>
-              <p className="text-neutral-700 leading-relaxed">
-                I use CBT, DBT, ACT, and mindfulness/somatic-based strategies. I enjoy challenging 
-                a client&apos;s mindset in order to help them gain more insight into how their thoughts 
-                and behavior patterns affect them both positively and negatively. I believe that all 
-                these approaches are a collaborative process between a client and therapist so that 
-                the client can eventually become their own therapist to target their own needs and 
-                move towards their goals.
+          <div className="grid sm:grid-cols-2 gap-4">
+            {/* Evidence-Based Methods */}
+            <div className="card p-5">
+              <div className="w-10 h-10 rounded-full bg-[#3e879e]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#3e879e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 1-6.23.693L5 15.3m14.8 0 .002 1.542a2.233 2.233 0 0 1-2.2 2.163 41.81 41.81 0 0 1-10.406 0 2.233 2.233 0 0 1-2.2-2.163L5 15.3" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[#3e879e] mb-2">Evidence-Based Methods</h3>
+              <p className="text-neutral-600 text-sm">
+                CBT, DBT, ACT, and mindfulness/somatic strategies to help you understand thought and behavior patterns.
               </p>
             </div>
 
-            <div>
-              <h3 className="font-semibold text-lg text-[#f48c44] mb-2">My Communication Style</h3>
-              <p className="text-neutral-700 leading-relaxed">
-                My communication style as a therapist is warm, open, and collaborative. I strive to 
-                create a safe and non-judgmental space where clients feel heard and understood. I aim 
-                to be clear and direct when explaining concepts, while also being sensitive to each 
-                client&apos;s emotional needs. I listen deeply and ask thoughtful questions to help 
-                clients explore their thoughts and feelings. My approach is adaptable—whether clients 
-                need gentle encouragement or more structured guidance, I tailor my communication to 
-                meet them where they are in their journey.
+            {/* Collaborative Process */}
+            <div className="card p-5">
+              <div className="w-10 h-10 rounded-full bg-[#f48c44]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#f48c44]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[#f48c44] mb-2">Collaborative Process</h3>
+              <p className="text-neutral-600 text-sm">
+                We work together so you can eventually become your own therapist, targeting your own needs.
+              </p>
+            </div>
+
+            {/* Deep Listening */}
+            <div className="card p-5">
+              <div className="w-10 h-10 rounded-full bg-[#c57b5a]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#c57b5a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[#c57b5a] mb-2">Deep Listening</h3>
+              <p className="text-neutral-600 text-sm">
+                I listen deeply and ask thoughtful questions to help you explore your thoughts and feelings.
+              </p>
+            </div>
+
+            {/* Adaptable Style */}
+            <div className="card p-5">
+              <div className="w-10 h-10 rounded-full bg-[#3e879e]/10 flex items-center justify-center mb-3">
+                <svg className="w-5 h-5 text-[#3e879e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
+                </svg>
+              </div>
+              <h3 className="font-semibold text-[#3e879e] mb-2">Adaptable Style</h3>
+              <p className="text-neutral-600 text-sm">
+                Whether you need gentle encouragement or structured guidance, I meet you where you are.
               </p>
             </div>
           </div>
@@ -139,17 +166,53 @@ export default function Home() {
             What to expect when we meet.
           </p>
 
-          <div className="card p-5 sm:p-6">
-            <p className="text-neutral-700 leading-relaxed mb-4">
-              In our first session, we&apos;ll focus on getting to know each other. I&apos;ll ask about 
-              what brought you to therapy, your current concerns, and any relevant background information. 
-              This is also your chance to ask questions and share anything you feel comfortable with.
-            </p>
-            <p className="text-neutral-700 leading-relaxed">
-              We&apos;ll talk about goals for therapy and how the process works, including confidentiality. 
-              The aim is to create a safe space and start building a trusting relationship, so you can 
-              feel supported moving forward.
-            </p>
+          <div className="space-y-0">
+            {/* Step 1 */}
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-[#3e879e] text-white flex items-center justify-center text-sm font-semibold">1</div>
+                <div className="w-0.5 bg-[#3e879e]/20 flex-1 my-2" />
+              </div>
+              <div className="pb-6">
+                <h3 className="font-semibold text-neutral-800 mb-1">Getting to know each other</h3>
+                <p className="text-neutral-600 text-sm">We&apos;ll start with introductions and I&apos;ll learn a bit about you.</p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-[#f48c44] text-white flex items-center justify-center text-sm font-semibold">2</div>
+                <div className="w-0.5 bg-[#f48c44]/20 flex-1 my-2" />
+              </div>
+              <div className="pb-6">
+                <h3 className="font-semibold text-neutral-800 mb-1">Discussing your concerns</h3>
+                <p className="text-neutral-600 text-sm">Share what brought you to therapy—your concerns, background, and questions.</p>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-[#c57b5a] text-white flex items-center justify-center text-sm font-semibold">3</div>
+                <div className="w-0.5 bg-[#c57b5a]/20 flex-1 my-2" />
+              </div>
+              <div className="pb-6">
+                <h3 className="font-semibold text-neutral-800 mb-1">Setting goals together</h3>
+                <p className="text-neutral-600 text-sm">We&apos;ll talk about what you want from therapy and create a path forward.</p>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-[#3e879e] text-white flex items-center justify-center text-sm font-semibold">4</div>
+              </div>
+              <div>
+                <h3 className="font-semibold text-neutral-800 mb-1">Building trust</h3>
+                <p className="text-neutral-600 text-sm">We&apos;ll cover confidentiality and begin building a safe, supportive relationship.</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -186,34 +249,49 @@ export default function Home() {
             Personalized care tailored to your needs.
           </p>
 
-          <div className="space-y-4">
-            <div className="service-item">
+          <div className="grid sm:grid-cols-3 gap-4">
+            {/* Anxiety & OCD */}
+            <div className="card p-5 text-center">
+              <div className="w-12 h-12 rounded-full bg-[#3e879e]/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[#3e879e]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z" />
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg text-[#3e879e] mb-2">
                 Anxiety &amp; OCD
               </h3>
-              <p className="text-neutral-700">
-                Learn to manage racing thoughts, intrusive patterns, and overwhelming worry. 
-                We&apos;ll build practical tools grounded in CBT and exposure therapy.
+              <p className="text-neutral-600 text-sm">
+                Manage racing thoughts, intrusive patterns, and worry with CBT and exposure therapy.
               </p>
             </div>
 
-            <div className="service-item">
+            {/* Identity & Self-Discovery */}
+            <div className="card p-5 text-center">
+              <div className="w-12 h-12 rounded-full bg-[#f48c44]/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[#f48c44]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg text-[#f48c44] mb-2">
                 Identity &amp; Self-Discovery
               </h3>
-              <p className="text-neutral-700">
-                Explore questions around identity, values, and who you want to become. 
-                A supportive space for self-understanding and growth.
+              <p className="text-neutral-600 text-sm">
+                Explore questions around identity, values, and who you want to become.
               </p>
             </div>
 
-            <div className="service-item">
+            {/* Life Transitions */}
+            <div className="card p-5 text-center">
+              <div className="w-12 h-12 rounded-full bg-[#c57b5a]/10 flex items-center justify-center mx-auto mb-4">
+                <svg className="w-6 h-6 text-[#c57b5a]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+                </svg>
+              </div>
               <h3 className="font-semibold text-lg text-[#c57b5a] mb-2">
-                Life Transitions &amp; Wellbeing
+                Life Transitions
               </h3>
-              <p className="text-neutral-700">
-                Navigate career changes, burnout, grief, or major life shifts. Build resilience 
-                and move forward with confidence.
+              <p className="text-neutral-600 text-sm">
+                Navigate career changes, burnout, grief, or major life shifts with resilience.
               </p>
             </div>
           </div>
