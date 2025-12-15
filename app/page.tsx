@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 
+const CONSULTATION_ENABLED = process.env.NEXT_PUBLIC_CONSULTATION_ENABLED === "true";
+const CONTACT_EMAIL = "hannahthayerlpcc@gmail.com";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -10,9 +13,15 @@ export default function Home() {
           <div className="min-w-0 flex-1">
             <p className="handwritten text-[#f48c44] text-xl sm:text-2xl">Hannah Thayer, LPCC</p>
           </div>
-          <Link href="/consultation" className="btn btn-primary text-sm sm:text-base">
-            Schedule
-          </Link>
+          {CONSULTATION_ENABLED ? (
+            <Link href="/consultation" className="btn btn-primary text-sm sm:text-base">
+              Schedule
+            </Link>
+          ) : (
+            <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary text-sm sm:text-base">
+              Schedule
+            </a>
+          )}
         </div>
       </header>
 
@@ -48,9 +57,15 @@ export default function Home() {
 
             {/* CTA Buttons - Full width on mobile */}
             <div className="flex flex-col sm:flex-row gap-3 sm:justify-center">
-              <Link href="/consultation" className="btn btn-primary btn-full">
-                Schedule a consultation
-              </Link>
+              {CONSULTATION_ENABLED ? (
+                <Link href="/consultation" className="btn btn-primary btn-full">
+                  Schedule a consultation
+                </Link>
+              ) : (
+                <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary btn-full">
+                  Schedule a consultation
+                </a>
+              )}
               <Link href="#about" className="btn btn-secondary btn-full">
                 Learn more
               </Link>
@@ -424,12 +439,18 @@ export default function Home() {
             </p>
             <span className="badge mb-4">Se habla español</span>
             <div className="mt-4">
-              <Link href="/consultation" className="btn btn-primary">
-                Schedule a consultation
-              </Link>
+              {CONSULTATION_ENABLED ? (
+                <Link href="/consultation" className="btn btn-primary">
+                  Schedule a consultation
+                </Link>
+              ) : (
+                <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary">
+                  Schedule a consultation
+                </a>
+              )}
             </div>
-          </div>
-          </div>
+        </div>
+        </div>
         </section>
       </main>
 
