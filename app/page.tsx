@@ -3,6 +3,35 @@ import Link from "next/link";
 
 const CONSULTATION_ENABLED = process.env.NEXT_PUBLIC_CONSULTATION_ENABLED === "true";
 const CONTACT_EMAIL = "hannahthayerlpcc@gmail.com";
+const EMAIL_SUBJECT = "Consultation Schedule Request";
+const EMAIL_BODY = `Hi Hannah,
+
+I'm reaching out to schedule a consultation for therapy services.
+
+NAME:
+First name: 
+Last name: 
+Preferred name (if different): 
+
+PRONOUNS:
+[e.g., she/her, he/him, they/them]
+
+MY PREFERRED MEETING TIMES:
+[Please list days/times that work best for you, e.g., "Weekday afternoons" or "Tuesday/Thursday mornings"]
+
+WHAT BRINGS ME TO THERAPY:
+[Please share a brief description of what you'd like to work on]
+
+HAVE YOU BEEN IN THERAPY BEFORE?
+[Yes/No - if yes, feel free to share what was helpful or what you're looking for this time]
+
+ADDITIONAL NOTES:
+[Anything else you'd like me to know]
+
+Thank you,
+[Your phone number (optional)]`;
+
+const MAILTO_HREF = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(EMAIL_SUBJECT)}&body=${encodeURIComponent(EMAIL_BODY)}`;
 
 export default function Home() {
   return (
@@ -18,7 +47,7 @@ export default function Home() {
               Schedule
             </Link>
           ) : (
-            <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary text-sm sm:text-base">
+            <a href={MAILTO_HREF} className="btn btn-primary text-sm sm:text-base">
               Schedule
             </a>
           )}
@@ -62,7 +91,7 @@ export default function Home() {
                   Schedule a consultation
                 </Link>
               ) : (
-                <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary btn-full">
+                <a href={MAILTO_HREF} className="btn btn-primary btn-full">
                   Schedule a consultation
                 </a>
               )}
@@ -444,7 +473,7 @@ export default function Home() {
                   Schedule a consultation
                 </Link>
               ) : (
-                <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn-primary">
+                <a href={MAILTO_HREF} className="btn btn-primary">
                   Schedule a consultation
                 </a>
               )}
