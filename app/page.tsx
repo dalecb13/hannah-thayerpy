@@ -429,7 +429,7 @@ export default function Home() {
         </section>
 
         {/* Testimonials */}
-        <section className="container section">
+        {/* <section className="container section">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6">
             What Clients Say
           </h2>
@@ -453,7 +453,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* CTA Section */}
         <section className="section-alt">
